@@ -6,7 +6,7 @@
     <description>Recent content in Tags on 在路上</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 02 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2020 19:18:05 +0800</lastBuildDate>
     
 	<atom:link href="http://blog.chongiofai.comf/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>adb</title>
       <link>http://blog.chongiofai.comf/tags/adb/</link>
-      <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 23 Nov 2020 19:18:05 +0800</pubDate>
       
       <guid>http://blog.chongiofai.comf/tags/adb/</guid>
       <description></description>
@@ -23,9 +23,36 @@
     <item>
       <title>android</title>
       <link>http://blog.chongiofai.comf/tags/android/</link>
-      <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 23 Nov 2020 19:18:05 +0800</pubDate>
       
       <guid>http://blog.chongiofai.comf/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fastboot</title>
+      <link>http://blog.chongiofai.comf/tags/fastboot/</link>
+      <pubDate>Mon, 23 Nov 2020 19:18:05 +0800</pubDate>
+      
+      <guid>http://blog.chongiofai.comf/tags/fastboot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oneplus</title>
+      <link>http://blog.chongiofai.comf/tags/oneplus/</link>
+      <pubDate>Mon, 23 Nov 2020 19:18:05 +0800</pubDate>
+      
+      <guid>http://blog.chongiofai.comf/tags/oneplus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>root</title>
+      <link>http://blog.chongiofai.comf/tags/root/</link>
+      <pubDate>Mon, 23 Nov 2020 19:18:05 +0800</pubDate>
+      
+      <guid>http://blog.chongiofai.comf/tags/root/</guid>
       <description></description>
     </item>
     

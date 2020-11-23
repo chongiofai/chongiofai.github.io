@@ -3,56 +3,77 @@
   
   <url>
     <loc>http://blog.chongiofai.comf/tags/adb/</loc>
-    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-23T19:18:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blog.chongiofai.comf/tags/android/</loc>
-    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-23T19:18:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://blog.chongiofai.comf/post/android-root/</loc>
-    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
+    <loc>http://blog.chongiofai.comf/post/android/</loc>
+    <lastmod>2020-11-23T19:18:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blog.chongiofai.comf/categories/</loc>
-    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-23T19:18:05+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.chongiofai.comf/tags/fastboot/</loc>
+    <lastmod>2020-11-23T19:18:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blog.chongiofai.comf/categories/note/</loc>
-    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-23T19:18:05+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.chongiofai.comf/tags/oneplus/</loc>
+    <lastmod>2020-11-23T19:18:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blog.chongiofai.comf/post/</loc>
-    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-23T19:18:05+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.chongiofai.comf/tags/root/</loc>
+    <lastmod>2020-11-23T19:18:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blog.chongiofai.comf/tags/</loc>
-    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-23T19:18:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blog.chongiofai.comf/</loc>
-    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-23T19:18:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
