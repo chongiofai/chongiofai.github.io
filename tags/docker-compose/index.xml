@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker-compose on 在路上</title>
+    <link>http://blog.chongiofai.comf/tags/docker-compose/</link>
+    <description>Recent content in docker-compose on 在路上</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 09 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.chongiofai.comf/tags/docker-compose/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PyYaml解释‘21:21`错误</title>
+      <link>http://blog.chongiofai.comf/post/pyyaml-parse-error/</link>
+      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.chongiofai.comf/post/pyyaml-parse-error/</guid>
+      <description>问题/Problem 在docker-compose.yml中有 1 - 21:21 解析解果為int(1281)非str(&amp;quot;21:21&amp;quot;</description>
+    </item>
+    
+  </channel>
+</rss>

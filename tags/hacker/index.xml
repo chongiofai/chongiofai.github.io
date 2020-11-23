@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hacker on 在路上</title>
+    <link>http://blog.chongiofai.comf/tags/hacker/</link>
+    <description>Recent content in hacker on 在路上</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 28 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.chongiofai.comf/tags/hacker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>V2ray中间人尝试</title>
+      <link>http://blog.chongiofai.comf/post/v2ray-mitm/</link>
+      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.chongiofai.comf/post/v2ray-mitm/</guid>
+      <description>前两天有新闻JD和GITHUB被劫持，和最近生活中有些情况令我想到关于劫持页面重导向试试实现(其实想指定情况下在我手机上劫持微信跳转页面到我</description>
+    </item>
+    
+  </channel>
+</rss>

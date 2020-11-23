@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nginx on 在路上</title>
+    <link>http://blog.chongiofai.comf/tags/nginx/</link>
+    <description>Recent content in nginx on 在路上</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 09 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.chongiofai.comf/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nginx502错误</title>
+      <link>http://blog.chongiofai.comf/post/nginx-502-error/</link>
+      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.chongiofai.comf/post/nginx-502-error/</guid>
+      <description>问题/Problem nginx 在轉發中報錯日志為 ... upstream sent too big header while reading response header from upstream ... 原因/Reason 反向代理的源站HTTP頭太大了 proxy_buffer_size proxy_buffers proxy_busy_buffers_size http://nginx.org/en/docs/http/ngx_http_proxy_module.html 解决/Fix 1 2 3</description>
+    </item>
+    
+  </channel>
+</rss>

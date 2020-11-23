@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>grub on 在路上</title>
+    <link>http://blog.chongiofai.comf/tags/grub/</link>
+    <description>Recent content in grub on 在路上</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.chongiofai.comf/tags/grub/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GRUB笔记</title>
+      <link>http://blog.chongiofai.comf/post/grub/</link>
+      <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.chongiofai.comf/post/grub/</guid>
+      <description>之前grub搞了个在U盘上引就安装系统，不过引导不了windows的安装装，和和和之前又洗了，之后再玩玩，也想想要怎么玩，因为也想搞个lin</description>
+    </item>
+    
+  </channel>
+</rss>

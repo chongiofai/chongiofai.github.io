@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 在路上</title>
+    <link>http://blog.chongiofai.comf/categories/</link>
+    <description>Recent content in Categories on 在路上</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 02 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.chongiofai.comf/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>note</title>
+      <link>http://blog.chongiofai.comf/categories/note/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.chongiofai.comf/categories/note/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bug</title>
+      <link>http://blog.chongiofai.comf/categories/bug/</link>
+      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.chongiofai.comf/categories/bug/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

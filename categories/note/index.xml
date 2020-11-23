@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>note on 在路上</title>
+    <link>http://blog.chongiofai.comf/categories/note/</link>
+    <description>Recent content in note on 在路上</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 02 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.chongiofai.comf/categories/note/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android Root笔记</title>
+      <link>http://blog.chongiofai.comf/post/android-root/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.chongiofai.comf/post/android-root/</guid>
+      <description>工具 1 sudo apt install android-tools-adb android-tools-fastboot adb Android Debug Bridge， 安卓机调试工具 主要的调试控制工具 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36</description>
+    </item>
+    
+    <item>
+      <title>V2ray中间人尝试</title>
+      <link>http://blog.chongiofai.comf/post/v2ray-mitm/</link>
+      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.chongiofai.comf/post/v2ray-mitm/</guid>
+      <description>前两天有新闻JD和GITHUB被劫持，和最近生活中有些情况令我想到关于劫持页面重导向试试实现(其实想指定情况下在我手机上劫持微信跳转页面到我</description>
+    </item>
+    
+    <item>
+      <title>GRUB笔记</title>
+      <link>http://blog.chongiofai.comf/post/grub/</link>
+      <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.chongiofai.comf/post/grub/</guid>
+      <description>之前grub搞了个在U盘上引就安装系统，不过引导不了windows的安装装，和和和之前又洗了，之后再玩玩，也想想要怎么玩，因为也想搞个lin</description>
+    </item>
+    
+    <item>
+      <title>Ngrok修改笔记</title>
+      <link>http://blog.chongiofai.comf/post/ngork/</link>
+      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.chongiofai.comf/post/ngork/</guid>
+      <description>client Run-SetupModel-newClientModel建立ngrokd-ngroko信道 好像無加密 ctl-clientModel.Ru</description>
+    </item>
+    
+  </channel>
+</rss>
