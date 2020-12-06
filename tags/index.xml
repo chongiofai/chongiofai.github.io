@@ -6,10 +6,60 @@
     <description>Recent content in Tags on 在路上</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Nov 2020 19:18:05 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 06 Dec 2020 09:13:12 +0800</lastBuildDate><atom:link href="http://blog.chongiofai.comf/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>archlinux</title>
+      <link>http://blog.chongiofai.comf/tags/archlinux/</link>
+      <pubDate>Sun, 06 Dec 2020 09:13:12 +0800</pubDate>
+      
+      <guid>http://blog.chongiofai.comf/tags/archlinux/</guid>
+      <description></description>
+    </item>
     
-	<atom:link href="http://blog.chongiofai.comf/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gentoo</title>
+      <link>http://blog.chongiofai.comf/tags/gentoo/</link>
+      <pubDate>Sun, 06 Dec 2020 09:13:12 +0800</pubDate>
+      
+      <guid>http://blog.chongiofai.comf/tags/gentoo/</guid>
+      <description></description>
+    </item>
     
+    <item>
+      <title>install</title>
+      <link>http://blog.chongiofai.comf/tags/install/</link>
+      <pubDate>Sun, 06 Dec 2020 09:13:12 +0800</pubDate>
+      
+      <guid>http://blog.chongiofai.comf/tags/install/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kali</title>
+      <link>http://blog.chongiofai.comf/tags/kali/</link>
+      <pubDate>Sun, 06 Dec 2020 09:13:12 +0800</pubDate>
+      
+      <guid>http://blog.chongiofai.comf/tags/kali/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>http://blog.chongiofai.comf/tags/linux/</link>
+      <pubDate>Sun, 06 Dec 2020 09:13:12 +0800</pubDate>
+      
+      <guid>http://blog.chongiofai.comf/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>livecd</title>
+      <link>http://blog.chongiofai.comf/tags/livecd/</link>
+      <pubDate>Sun, 06 Dec 2020 09:13:12 +0800</pubDate>
+      
+      <guid>http://blog.chongiofai.comf/tags/livecd/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>adb</title>
@@ -107,15 +157,6 @@
       <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>http://blog.chongiofai.comf/tags/docker-compose/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>http://blog.chongiofai.comf/tags/linux/</link>
-      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://blog.chongiofai.comf/tags/linux/</guid>
       <description></description>
     </item>
     

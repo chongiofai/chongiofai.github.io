@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.75.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
 
 
 <link rel="canonical" href="http://blog.chongiofai.comf/" />
@@ -45,9 +45,10 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://blog.chongiofai.comf/" />
-<meta property="og:updated_time" content="2020-11-23T19:18:05+08:00" />
+<meta property="og:updated_time" content="2020-12-06T09:13:12+08:00" />
 <meta itemprop="name" content="在路上">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="">
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="在路上"/>
 <meta name="twitter:description" content=""/>
 
@@ -112,20 +113,66 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/linux/">Linux</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-12-06 </span>
+      <div class="post-category">
+          <a href="/categories/note/"> note </a>
+          </div>
+        <span class="more-meta"> 3114 words </span>
+        <span class="more-meta"> 7 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Linux 看了一些文档和资料,纪录一下对于Linux或者OS上的理解,原本了解到Gentoo这个发行版,然后再看到Archlinux,在上周末装了A
+    </div>
+    <div class="read-more">
+      <a href="/post/linux/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/livecd/">LiveCD</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-12-06 </span>
+      <div class="post-category">
+          <a href="/categories/note/"> note </a>
+          </div>
+        <span class="more-meta"> 117 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      LiveCD Install LiveCD 1 2 3 4 5 6 7 8 9 dd status=progress if=livecd.iso of=/dev/sdaX bs=512 fdisk ... # TODO: fix disk size cryptsetup luksFormt /dev/sdaX cryptsetup open persistence /dev/sdaX mkfs.ext4 -L persistence /dev/mapper/persistence mount /dev/mapper/persistence /mnt/livecd echo &#34;/ union&#34; &gt; /mnt/livecd/persistence.conf umount /dev/mapper/persistence cryptsetup close persistence 参考资料 https://www.kali.org/downloads/ https://www.kali.org/docs/usb/kali-linux-live-usb-install-linux/ https://www.kali.org/docs/usb/kali-linux-live-usb-persistence/ 后续 TODO: 先把记得的先写下,用了一
+    </div>
+    <div class="read-more">
+      <a href="/post/livecd/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/android/">Android刷机</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2020-11-23 </span>
       <div class="post-category">
           <a href="/categories/note/"> note </a>
           </div>
-        <span class="more-meta"> 1216 words </span>
+        <span class="more-meta"> 1228 words </span>
         <span class="more-meta"> 3 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Android刷机 环境 OnePlus8Pro Kali Rolling adb Android Debug Bridge version 1.0.39 Version 1:8.1.0+r23-8 Installed as /usr/lib/android-sdk/platform-tools/adb sudo apt install android-tools-adb fastboot fastboot version 1:8.1.0+r23-8 Installed as /usr/lib/android-sdk/platform-tools/fastboot sudo apt install android-tools-fastboot 基础 解锁OEM 进入FastbootMode 进入Recover
+      Android刷机 环境 OnePlus8Pro Kali Rolling adb Android Debug Bridge version 1.0.39 Version 1:8.1.0+r23-8 Installed as /usr/lib/android-sdk/platform-tools/adb sudo apt install android-tools-adb fastboot fastboot version 1:8.1.0+r23-8 Installed as /usr/lib/android-sdk/platform-tools/fastboot sudo apt install android-tools-fastboot 基础 解锁OEM https://source.android.com/setup/build/running 进入FastbootMode 进入Recove
     </div>
     <div class="read-more">
       <a href="/post/android/" class="read-more-link">Read more...</a>
@@ -175,52 +222,6 @@
     </div>
     <div class="read-more">
       <a href="/post/v2ray-mitm/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/grub/">GRUB笔记</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-01-26 </span>
-      <div class="post-category">
-          <a href="/categories/note/"> note </a>
-          </div>
-        <span class="more-meta"> 848 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      之前grub搞了个在U盘上引就安装系统，不过引导不了windows的安装装，和和和之前又洗了，之后再玩玩，也想想要怎么玩，因为也想搞个lin
-    </div>
-    <div class="read-more">
-      <a href="/post/grub/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/base64-encode-linux-and-windows/">base64在Windows及Linux下错误</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-12-09 </span>
-      <div class="post-category">
-          <a href="/categories/bug/"> bug </a>
-          </div>
-        <span class="more-meta"> 204 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      问题/Problem 在linux上echo &quot;STRING&quot;|base時與decode結果不一致,在python base6
-    </div>
-    <div class="read-more">
-      <a href="/post/base64-encode-linux-and-windows/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

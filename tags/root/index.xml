@@ -6,18 +6,14 @@
     <description>Recent content in root on 在路上</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Nov 2020 19:18:05 +0800</lastBuildDate>
-    
-	<atom:link href="http://blog.chongiofai.comf/tags/root/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 23 Nov 2020 19:18:05 +0800</lastBuildDate><atom:link href="http://blog.chongiofai.comf/tags/root/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Android刷机</title>
       <link>http://blog.chongiofai.comf/post/android/</link>
       <pubDate>Mon, 23 Nov 2020 19:18:05 +0800</pubDate>
       
       <guid>http://blog.chongiofai.comf/post/android/</guid>
-      <description>Android刷机 环境 OnePlus8Pro Kali Rolling adb Android Debug Bridge version 1.0.39 Version 1:8.1.0+r23-8 Installed as /usr/lib/android-sdk/platform-tools/adb sudo apt install android-tools-adb fastboot fastboot version 1:8.1.0+r23-8 Installed as /usr/lib/android-sdk/platform-tools/fastboot sudo apt install android-tools-fastboot 基础 解锁OEM 进入FastbootMode 进入Recover</description>
+      <description>Android刷机 环境 OnePlus8Pro Kali Rolling adb Android Debug Bridge version 1.0.39 Version 1:8.1.0+r23-8 Installed as /usr/lib/android-sdk/platform-tools/adb sudo apt install android-tools-adb fastboot fastboot version 1:8.1.0+r23-8 Installed as /usr/lib/android-sdk/platform-tools/fastboot sudo apt install android-tools-fastboot 基础 解锁OEM https://source.android.com/setup/build/running 进入FastbootMode 进入Recove</description>
     </item>
     
   </channel>

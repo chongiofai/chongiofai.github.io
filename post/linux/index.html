@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Linux - 在路上</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ch0ng1ofa1" /><meta name="description" content="Linux 看了一些文档和资料,纪录一下对于Linux或者OS上的理解,原本了解到Gentoo这个发行版,然后再看到Archlinux,在上周末装了A" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
+
+
+<link rel="canonical" href="http://blog.chongiofai.comf/post/linux/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Linux" />
+<meta property="og:description" content="Linux 看了一些文档和资料,纪录一下对于Linux或者OS上的理解,原本了解到Gentoo这个发行版,然后再看到Archlinux,在上周末装了A" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blog.chongiofai.comf/post/linux/" />
+<meta property="article:published_time" content="2020-12-06T09:13:12+08:00" />
+<meta property="article:modified_time" content="2020-12-06T09:13:12+08:00" />
+<meta itemprop="name" content="Linux">
+<meta itemprop="description" content="Linux 看了一些文档和资料,纪录一下对于Linux或者OS上的理解,原本了解到Gentoo这个发行版,然后再看到Archlinux,在上周末装了A">
+<meta itemprop="datePublished" content="2020-12-06T09:13:12+08:00" />
+<meta itemprop="dateModified" content="2020-12-06T09:13:12+08:00" />
+<meta itemprop="wordCount" content="3114">
+
+
+
+<meta itemprop="keywords" content="linux,gentoo,archlinux,install," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Linux"/>
+<meta name="twitter:description" content="Linux 看了一些文档和资料,纪录一下对于Linux或者OS上的理解,原本了解到Gentoo这个发行版,然后再看到Archlinux,在上周末装了A"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">在路上</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">在路上</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Linux</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-12-06 </span>
+        <div class="post-category">
+            <a href="/categories/note/"> note </a>
+            </div>
+          <span class="more-meta"> 3114 words </span>
+          <span class="more-meta"> 7 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#preinstall">Preinstall</a></li>
+    <li><a href="#install-gentoo--archlinux">Install Gentoo / Archlinux</a></li>
+    <li><a href="#参考资料">参考资料</a></li>
+    <li><a href="#后续">后续</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="linux">Linux</h1>
+<blockquote>
+<p>看了一些文档和资料,纪录一下对于Linux或者OS上的理解,原本了解到Gentoo这个发行版,然后再看到Archlinux,在上周末装了Archlinux(NetworkManager卡了在Dbus Error&hellip;),今周再试了一下Gentoo(还没装完&hellip;),先纪录一下未完待续吧&hellip;</p>
+</blockquote>
+<ol>
+<li>Gentoo VS Archlinux</li>
+</ol>
+<blockquote>
+<p><a href="https://www.gentoo.org/">https://www.gentoo.org/</a></p>
+<p><a href="https://www.archlinux.org/">https://www.archlinux.org/</a></p>
+</blockquote>
+<p>这两个发行版(Gentoo,Archlinux)对比其他发行版(Ubuntu,Kali,Centos,Debian&hellip;),会有更多的可塑性,最直接的了解是在这些其他发行版在插入LiveCD/InstallISO时,会引导进行一系列如分区,用户,地域,时间等配置,在这两发行版都会回归到Linux原本的文件配置自行修改,还有如Gentoo可以自已编译内核,对硬件的兼容</p>
+<p>Archlinux使用<code>pacman</code>作为包管理器,有提供二进制的包可以直接使用,奉行KISS (Keep It Simple, Stupid.),Archlinux社区对Gentoo的评价为过度engineering</p>
+<p>Gentoo使用<code>portage</code>作为包管理器,提供源码编译使用,有<code>USE</code>这个参数可以对编译进行配置</p>
+<blockquote>
+<p>在听到每个都要编译时就不想装了,想起自已编译一个个软件的看<code>./configure</code>再<code>make</code>&hellip;我自已之前在Ubuntu编的<code>vim</code>跟著我换了好多好多次系统..懒再看一次<code>./configure</code>,然后发现了这个<code>USE</code>感觉简直真是恩物,太赞了&hellip;抽象了各个包间的参数,无以言表,入坑试撸Gentoo=D,更多的对比未完待续(?)</p>
+</blockquote>
+<ol>
+<li>OpenRC VS Systemd</li>
+</ol>
+<blockquote>
+<p><a href="https://wiki.archlinux.org/index.php/Systemd">https://wiki.archlinux.org/index.php/Systemd</a></p>
+<p><a href="https://wiki.gentoo.org/wiki/OpenRC">https://wiki.gentoo.org/wiki/OpenRC</a></p>
+</blockquote>
+<p>对于Gentoo默认是使用<code>OpenRC</code>,现在大量的Linux发行版都使用<code>Systemd</code>(Archlinux也是使用<code>Systemd</code>),在看了一些资料后了解,这两个都是作为<code>PID1</code>的<code>init</code>(其中其实还有一个<code>SysVinit</code>,也是大量发行版以前的<code>init</code>),且<code>gnome</code>也是绑定了<code>Systemd</code>,对于<code>Systemd</code>可以理解为有高度集成的一个<code>init</code>,其中包括<code>timedatectl</code>,<code>systemctl</code>,<code>journalctl</code>,<code>hostnamectl</code>等等,还有对很多的操作,有很多对于<code>Systemd</code>的负面评价,在看完后装Gentoo时决定,再学习一次试一下<code>OpenRC</code>看看还需要什么服务的&hellip;</p>
+<ol>
+<li>Linux After Press Power Button</li>
+</ol>
+<blockquote>
+<p><a href="https://www.thegeekstuff.com/2011/02/linux-boot-process/">https://www.thegeekstuff.com/2011/02/linux-boot-process/</a></p>
+<p>6 Stages of Linux Boot Process</p>
+<p>BIOS - Basic Input/Output system executes MBR</p>
+<p>MBR - Master Boot Record executes GRUB</p>
+<p>GRUB - Grand Unified Bootloader executes Kernel</p>
+<p>Kernel - Kernel executes /sbin/init</p>
+<p>Init - Init executes runlevel programs</p>
+<p>Runlevel - Runlevel programs are executes from /etc/rc.d/rc*.d/</p>
+</blockquote>
+<p>BIOS/UEFI</p>
+<ol>
+<li>Partition</li>
+</ol>
+<blockquote>
+<p>MBR</p>
+<p>主引导记录MBR (Master Boot Record)对分区的起始扇区和长度使用32比特的标识符，它支持三种分区类型：主分区、扩展分区和逻辑分区。主分区把它们的信息存储在主引导记录里一个非常小的空间里，通常是512字节，因为这个空间太小了，所以系统只支持四个主分区。（例如从 /dev/sda1 到/dev/sda4）</p>
+<p>GPT</p>
+<p>GPT(GUID Partition Table)为分区使用64比特标识符，它用来存储分区信息的空间也远比MBR的512字节要大，GPT磁盘它也不对分区的数量作限制。分区的大小限制可以达到8ZiB。 译者注：</p>
+<p>1ZiB = 1,024 EiB
+1EiB = 1024 PiB
+1PiB = 1024 TiB
+1TiB = 1024 GiB
+1GiB = 1024 MiB
+1MiB = 1024 KiB
+1KiB = 1024 B
+当操作系统和系统固件之间的软件接口是UEFI (相对于BIOS)时，GPT几乎是必选的，因为这里MBR会引起很多兼容性问题。</p>
+<p>GPT还利用校验和和冗余。 它携带CRC32校验和以检测报头和分区表中的错误，并在磁盘的末尾有一个备份GPT。 此备份表可用于恢复磁盘开头附近主GPT的损坏。</p>
+</blockquote>
+<ol>
+<li>File System</li>
+</ol>
+<blockquote>
+<p><a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Disks/zh-cn#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F">https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Disks/zh-cn#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F</a></p>
+<p>btrfs
+是下一代文件系统，提供了许多高级功能，如快照，通过校验和自我修复、 透明压缩、 子卷和集成 RAID。几个发行版已经开始将它作为一个默认的选项,但它还未为生产工作做好准备。文件系统报告崩溃是常见的。其开发人员敦促人们运行最新的内核版本来解决安全问题,以及老的问题。 这种情况已经很多年了,现在使用它还为时过早。如果出现变更，以及发生了变化，解决错误问题，都很少往旧内核注入补丁。请谨慎使用这个文件系统!
+ext2
+是经考验证明可靠的Linux文件系统，但是没有元数据日志，这意味这在启动系统时的ext2文件系统的日常检查相当耗时。现在相当一部分的新一代的日志文件系统都可以非常迅速检查一致性，因此比那些非日志文件系统更受欢迎。当你启动系统碰巧遇到文件系统状态不一致时，日志文件系统不会在那里耽搁很长时间。
+ext3
+是ext2文件系统的带日志版本，提供了元数据日志模式以快速恢复数据。此外还提供了其他增强的日志模式，如完整数据日志模式和有序数据日志模式。它使用了HTree索引，在几乎所有的情况下都能保持高性能。简而言之，ext3是非常好及可靠的文件系统。
+ext4
+最初创建为ext3的一个分支，EXT4带来了新的功能，性能改进和去除中度更改磁盘格式大小限制。它可以跨越体积高达1的EB并用16 TB最大文件大小。取而代之的是经典的ext2/3位块分配的ext4的使用范围，这对提高大文件的性能，并减少碎片。的Ext4还提供了更为复杂的块分配算法（延迟分配和多嵌段分配）给文件系统驱动更多的方式来优化数据的布局在磁盘上。 EXT4是推荐的通用所有平台的文件系统。
+f2fs
+这个文件系统最初由三星创建用于NAND闪存，是一种闪存文件系统 从直到2016年第二季度起，这个文件系统仍然被认为不成熟。把Gentoo安装到microSD卡，USB驱动器或其他基于闪存的存储设备时使用它是一个不错的选择。
+JFS
+是IBM的高性能日志文件系统。JFS是一个轻量级的、快速的和稳定的基于B+树的文件系统，在很多情况下都有很好的表现。
+ReiserFS
+是基于B+树的文件系统，它有着非常全面的性能，特别时在处理很多小文件的时候，虽然会占用多一点CPU。ReiserFS相比其他文件系统显得受维护的不够。
+XFS
+是一种带元数据日志的文件系统，它有一个健壮的特性集，并且对可伸缩性进行了优化。XFS似乎对各种各样的硬件问题显得不够宽容。
+vfat
+也称为FAT32，被支持Linux，但不支持任何权限设置。它主要用于互操作性与其他操作系统（主要是微软的Windows），但也是很有必要的一些系统固件（如UEFI）的支持。
+NTFS
+这个“新技术”的文件系统是Microsoft Windows的旗舰文件系统。 与上面的vfat类似，它不存储BSD或Linux正常工作所需的权限设置或扩展属性，因此它不能用作根文件系统。 它应该&rsquo;只&rsquo;用于与Microsoft Windows系统的互操作性（注意只强调）。</p>
+</blockquote>
+<ol>
+<li>
+<p>What is DE, DM, WM
+<code>Linux</code>图形化上有一个框架/标准/协议(?)叫<code>X11</code>,其中<code>Xorg</code>就是他的实现,在各种<code>DM</code>,<code>DE</code>,<code>WM</code>上都使用相应接口进行,也是对多个不同之间框架模块兼容的理由
+DE
+Desktop Environment</p>
+<p>DM
+Display Manage</p>
+<p>WM
+Window Manage</p>
+</li>
+</ol>
+<h2 id="preinstall">Preinstall</h2>
+<ol>
+<li>backup dick images</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ fdisk -l
+$ blkid
+$ dd <span class="nv">status</span><span class="o">=</span>progress <span class="nv">bs</span><span class="o">=</span><span class="m">512</span> <span class="k">if</span><span class="o">=</span>/dev/sda1 <span class="p">|</span> gzip -nc -6 &gt; backup.img.gz
+<span class="c1"># status</span>
+<span class="c1"># bs</span>
+<span class="c1"># if</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><code>fdisk</code>和<code>parted</code>都是分区实用程序。 <code>fdisk</code>是众所周知的，稳定的，并且推荐用于MBR分区布局，而<code>parted</code>是支持GPT分区的第一个Linux块设备管理实用程序之一。 喜欢<code>fdisk</code>的用户界面的用户可以使用 <code>gdisk</code> （GPT fdisk）作为<code>parted</code>的替代。</p>
+</blockquote>
+<ol start="2">
+<li>make install</li>
+</ol>
+<h2 id="install-gentoo--archlinux">Install Gentoo / Archlinux</h2>
+<blockquote>
+<p><a href="https://wiki.gentoo.org/wiki/Installation">https://wiki.gentoo.org/wiki/Installation</a></p>
+<p><a href="https://wiki.archlinux.org/index.php/installation_guide">https://wiki.archlinux.org/index.php/installation_guide</a></p>
+</blockquote>
+<p>其实官方文档很详细,好像没必要再写这个,纪录一下碰到的坑和理解,因为之前安装都是在相应LiveCD下,所以先未完待</p>
+<ol>
+<li>
+<p>安装发行版工具链,如Archlinux的<code>pacman</code>和Gentoo的<code>portage</code></p>
+<ul>
+<li>
+<p>Archlinux</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pacstrap /mnt base
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Gentoo</p>
+<blockquote>
+<p><a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Stage">https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Stage</a></p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">tar xf stage3-amd64-20201202T214503Z.tar.xz
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>安装Linux的内核,这里的Gentoo需要配置和编译,也有<code>genkernel</code>工具弄个基本的(吧?)</p>
+<ul>
+<li>
+<p>Archlinux</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pacstrap /mnt linux
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Gentoo</p>
+<blockquote>
+<p><a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Kernel">https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Kernel</a></p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">emerge --ask sys-kernel/gentoo-sources
+make menuconfig
+make <span class="o">&amp;&amp;</span> make modules_install
+make install
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>安装基本驱动</p>
+<ul>
+<li>
+<p>Archlinux</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pacstrap /mnt linux-firmware
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Gentoo</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">emerge --ask sys-kernel/linux-firmware
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+</ol>
+<h2 id="参考资料">参考资料</h2>
+<p><a href="https://wiki.gentoo.org/">https://wiki.gentoo.org/</a></p>
+<p><a href="http://wiki.archlinux.org/">http://wiki.archlinux.org/</a></p>
+<p><a href="https://www.thegeekstuff.com/2011/02/linux-boot-process/">https://www.thegeekstuff.com/2011/02/linux-boot-process/</a></p>
+<h2 id="后续">后续</h2>
+<p>TODO: 完成安装Gentoo</p>
+<p>TODO: DBus</p>
+<p>都先草稿弄出来吧..</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ch0ng1ofa1</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-12-06
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/linux/">linux</a>
+          <a href="/tags/gentoo/">gentoo</a>
+          <a href="/tags/archlinux/">archlinux</a>
+          <a href="/tags/install/">install</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/livecd/">
+            <span class="next-text nav-default">LiveCD</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:chongiofai@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/chongiofai" class="iconfont icon-github" title="github"></a>
+  <a href="http://blog.chongiofai.comf/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ch0ng1ofa1</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -6,11 +6,7 @@
     <description>Recent content in golang on 在路上</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 06 Nov 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://blog.chongiofai.comf/tags/golang/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 06 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.chongiofai.comf/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GO解释YAML错误</title>
       <link>http://blog.chongiofai.comf/post/go-yaml/</link>

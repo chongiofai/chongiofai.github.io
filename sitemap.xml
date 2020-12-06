@@ -2,6 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.chongiofai.comf/tags/archlinux/</loc>
+    <lastmod>2020-12-06T09:13:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.chongiofai.comf/categories/</loc>
+    <lastmod>2020-12-06T09:13:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.chongiofai.comf/tags/gentoo/</loc>
+    <lastmod>2020-12-06T09:13:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.chongiofai.comf/tags/install/</loc>
+    <lastmod>2020-12-06T09:13:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.chongiofai.comf/tags/kali/</loc>
+    <lastmod>2020-12-06T09:13:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.chongiofai.comf/post/linux/</loc>
+    <lastmod>2020-12-06T09:13:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.chongiofai.comf/tags/linux/</loc>
+    <lastmod>2020-12-06T09:13:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.chongiofai.comf/post/livecd/</loc>
+    <lastmod>2020-12-06T09:13:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.chongiofai.comf/tags/livecd/</loc>
+    <lastmod>2020-12-06T09:13:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.chongiofai.comf/categories/note/</loc>
+    <lastmod>2020-12-06T09:13:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.chongiofai.comf/post/</loc>
+    <lastmod>2020-12-06T09:13:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.chongiofai.comf/tags/</loc>
+    <lastmod>2020-12-06T09:13:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.chongiofai.comf/</loc>
+    <lastmod>2020-12-06T09:13:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.chongiofai.comf/tags/adb/</loc>
     <lastmod>2020-11-23T19:18:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -23,21 +114,7 @@
   </url>
   
   <url>
-    <loc>http://blog.chongiofai.comf/categories/</loc>
-    <lastmod>2020-11-23T19:18:05+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.chongiofai.comf/tags/fastboot/</loc>
-    <lastmod>2020-11-23T19:18:05+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.chongiofai.comf/categories/note/</loc>
     <lastmod>2020-11-23T19:18:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -51,28 +128,7 @@
   </url>
   
   <url>
-    <loc>http://blog.chongiofai.comf/post/</loc>
-    <lastmod>2020-11-23T19:18:05+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.chongiofai.comf/tags/root/</loc>
-    <lastmod>2020-11-23T19:18:05+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.chongiofai.comf/tags/</loc>
-    <lastmod>2020-11-23T19:18:05+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.chongiofai.comf/</loc>
     <lastmod>2020-11-23T19:18:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -157,13 +213,6 @@
   
   <url>
     <loc>http://blog.chongiofai.comf/post/docker-permission-denied/</loc>
-    <lastmod>2019-12-09T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.chongiofai.comf/tags/linux/</loc>
     <lastmod>2019-12-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
