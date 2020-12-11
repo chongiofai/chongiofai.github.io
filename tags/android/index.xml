@@ -1,19 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>android on 在路上</title>
-    <link>http://blog.chongiofai.comf/tags/android/</link>
-    <description>Recent content in android on 在路上</description>
+    <title>android on ON THE WAY</title>
+    <link>https://blog.chongiofai.com/tags/android/</link>
+    <description>Recent content in android on ON THE WAY</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 23 Nov 2020 19:18:05 +0800</lastBuildDate><atom:link href="http://blog.chongiofai.comf/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 09 Dec 2020 13:06:13 +0800</lastBuildDate><atom:link href="https://blog.chongiofai.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adb Device No Permissions</title>
+      <link>https://blog.chongiofai.com/buglog/adb-device-no-permissions/</link>
+      <pubDate>Wed, 09 Dec 2020 13:06:13 +0800</pubDate>
+      
+      <guid>https://blog.chongiofai.com/buglog/adb-device-no-permissions/</guid>
+      <description>[TOC]
+Question 1$ adb devices 2List of devices attached 300000000 no permissions (user in plugdev group; are your udev rules wrong?); see [http://developer.android.com/tools/device.html] Fixed 1$ sudo adb kill-server 2$ sudo pkill adb 3$ sudo adb start-server 4$ adb devices 5List of devices attached 600000000 unauthorized </description>
+    </item>
+    
     <item>
       <title>Android刷机</title>
-      <link>http://blog.chongiofai.comf/post/android/</link>
+      <link>https://blog.chongiofai.com/note/android/</link>
       <pubDate>Mon, 23 Nov 2020 19:18:05 +0800</pubDate>
       
-      <guid>http://blog.chongiofai.comf/post/android/</guid>
-      <description>Android刷机 环境 OnePlus8Pro Kali Rolling adb Android Debug Bridge version 1.0.39 Version 1:8.1.0+r23-8 Installed as /usr/lib/android-sdk/platform-tools/adb sudo apt install android-tools-adb fastboot fastboot version 1:8.1.0+r23-8 Installed as /usr/lib/android-sdk/platform-tools/fastboot sudo apt install android-tools-fastboot 基础 解锁OEM https://source.android.com/setup/build/running 进入FastbootMode 进入Recove</description>
+      <guid>https://blog.chongiofai.com/note/android/</guid>
+      <description>Android刷机 环境   OnePlus8Pro
+  Kali Rolling
+  adb
+ Android Debug Bridge version 1.0.39 Version 1:8.1.0+r23-8 Installed as /usr/lib/android-sdk/platform-tools/adb
+sudo apt install android-tools-adb
+   fastboot
+ fastboot version 1:8.1.0+r23-8 Installed as /usr/lib/android-sdk/platform-tools/fastboot
+sudo apt install android-tools-fastboot
+   基础   解锁OEM
+ https://source.android.com/setup/build/running
+   进入FastbootMode
+  进入RecoveryMode
+  安装Magisk/MagiskManager
+ 官方网站：　https://magiskmanager.com/
+   玩起来   官方OTA全量包中解压，此处使用OnePlus8ProHydrogen_15.</description>
     </item>
     
   </channel>

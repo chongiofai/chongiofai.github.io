@@ -1,0 +1,912 @@
+
+<!DOCTYPE html>
+<html lang="en" data-figures="" class="page">
+  <head>
+<title>Android刷机 | ON THE WAY</title>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.79.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta property="og:locale" content="en" />
+
+<meta property="og:type" content="article">
+<meta name="description" content="Android刷机 环境   OnePlus8Pro
+  Kali Rolling
+  adb
+ Android Debug Bridge version 1.0.39 Version 1:8.1.0&#43;r23-8 Installed as /usr/lib/android-sdk/platform-tools/adb …">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="">
+<meta name="twitter:title" content="Android刷机" />
+<meta property="og:url" content="https://blog.chongiofai.com/note/android/" />
+<meta property="og:title" content="Android刷机" />
+<meta property="og:description" content="Android刷机 环境   OnePlus8Pro
+  Kali Rolling
+  adb
+ Android Debug Bridge version 1.0.39 Version 1:8.1.0&#43;r23-8 Installed as /usr/lib/android-sdk/platform-tools/adb …" />
+<meta property="og:image" content="https://blog.chongiofai.com/images/thumbnail.png" />
+<link rel="apple-touch-icon" sizes="180x180" href='https://blog.chongiofai.com/icons/apple-touch-icon.png'>
+<link rel="icon" type="image/png" sizes="32x32" href='https://blog.chongiofai.com/icons/favicon-32x32.png'>
+<link rel="manifest" href='https://blog.chongiofai.com/icons/site.webmanifest'>
+<link rel="mask-icon" href='https://blog.chongiofai.com/safari-pinned-tab.svg' color="#002538">
+<meta name="msapplication-TileColor" content="#002538">
+<meta name="theme-color" content="#002538">
+
+<link rel="canonical" href="https://blog.chongiofai.com/note/android/">
+
+    
+
+    
+    
+    <link rel="preload" href="https://blog.chongiofai.com/css/styles.17bd8db1e1e9d3fde7e52431779c901a12c654a66914bb4472fd4b0c6880c72ea87f9dc818f7ca35bf2e934c65a6a7d6c7afa12a18e60a79ff4e093e3ac621ba.css" integrity = "sha512-F72NseHp0/3n5SQxd5yQGhLGVKZpFLtEcv1LDGiAxy6of53IGPfKNb8uk0xlpqfWx6&#43;hKhjmCnn/Tgk&#43;OsYhug==" as="style" crossorigin="anonymous">
+    <link rel="preload" href="https://blog.chongiofai.com/js/bundle.min.6a08c8343858d2eda31d411dae09830156fb4931fca1a6193bd6a38793022c054d1fe1328935094111eb82f5963e29e361d263eafcd6bad51855bf1b0242c73d.js" as="script" integrity=
+    "sha512-agjINDhY0u2jHUEdrgmDAVb7STH8oaYZO9ajh5MCLAVNH&#43;EyiTUJQRHrgvWWPinjYdJj6vzWutUYVb8bAkLHPQ==" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" type="text/css" href="https://blog.chongiofai.com/css/styles.17bd8db1e1e9d3fde7e52431779c901a12c654a66914bb4472fd4b0c6880c72ea87f9dc818f7ca35bf2e934c65a6a7d6c7afa12a18e60a79ff4e093e3ac621ba.css" integrity="sha512-F72NseHp0/3n5SQxd5yQGhLGVKZpFLtEcv1LDGiAxy6of53IGPfKNb8uk0xlpqfWx6&#43;hKhjmCnn/Tgk&#43;OsYhug==" crossorigin="anonymous">
+    
+  </head>
+  
+  
+    
+  
+  <body data-code="7" data-lines="false" id="documentTop">
+
+<header class="nav_header" >
+  <nav class="nav">
+    <a href='https://blog.chongiofai.com/' class="nav_brand nav_item">
+        ON THE WAY
+      <div class="nav_close">
+        <div>
+          <svg class="icon">
+  <use xlink:href="#open-menu"></use>
+</svg>
+          <svg class="icon">
+  <use xlink:href="#closeme"></use>
+</svg>
+        </div>
+      </div>
+    </a>
+    <div class='nav_body nav_body_left'>
+      
+      
+      
+        
+
+  <div class="nav_parent">
+    <a href="https://blog.chongiofai.com/" class="nav_item">Home </a>
+  </div>
+  <div class="nav_parent">
+    <a href="https://blog.chongiofai.com/note/" class="nav_item">Note </a>
+  </div>
+  <div class="nav_parent">
+    <a href="https://blog.chongiofai.com/buglog/" class="nav_item">BugLog </a>
+  </div>
+  <div class="nav_parent">
+    <a href="https://blog.chongiofai.com/other/" class="nav_item">Other </a>
+  </div>
+  <div class="nav_parent">
+    <a href="https://blog.chongiofai.com/about/" class="nav_item">About </a>
+  </div>
+      
+      <div class="nav_parent">
+        <a href="#" class="nav_item">🌐</a>
+        <div class="nav_sub">
+          <span class="nav_child"></span>
+          
+          <a href="https://blog.chongiofai.com/" class="nav_child nav_item">English</a>
+          
+          <a href="https://blog.chongiofai.com/cn/" class="nav_child nav_item">Chinese</a>
+          
+        </div>
+      </div>
+      
+<div class='follow'>
+  <a href="https://github.com/chongiofai">
+    <svg class="icon">
+  <use xlink:href="#github"></use>
+</svg>
+  </a>
+    
+  <a href="https://blog.chongiofai.com/index.xml">
+    <svg class="icon">
+  <use xlink:href="#rss"></use>
+</svg>
+  </a>
+<div class="color_mode">
+  <input type="checkbox" class="color_choice" id="mode">
+</div>
+
+</div>
+
+    </div>
+  </nav>
+</header>
+
+    <main>
+  
+<div class="grid-inverse wrap content">
+  <article class="post_content">
+    <h1 class="post_title">Android刷机</h1><div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    2020-11-23</span>
+    <a href='https://blog.chongiofai.com/tags/android' class="post_tag button button_translucent">android
+    </a>
+    <a href='https://blog.chongiofai.com/tags/adb' class="post_tag button button_translucent">adb
+    </a>
+    <a href='https://blog.chongiofai.com/tags/fastboot' class="post_tag button button_translucent">fastboot
+    </a>
+    <a href='https://blog.chongiofai.com/tags/root' class="post_tag button button_translucent">root
+    </a>
+    <a href='https://blog.chongiofai.com/tags/oneplus' class="post_tag button button_translucent">oneplus
+    </a>
+</div>
+
+    
+<div class="post_share">
+  Share on:
+  <a href="https://twitter.com/intent/tweet?text=Android%e5%88%b7%e6%9c%ba&url=https%3a%2f%2fblog.chongiofai.com%2fnote%2fandroid%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
+    <svg class="icon">
+  <use xlink:href="#twitter"></use>
+</svg>
+  </a>
+  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.chongiofai.com%2fnote%2fandroid%2f&t=Android%e5%88%b7%e6%9c%ba" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
+    <svg class="icon">
+  <use xlink:href="#facebook"></use>
+</svg>
+  </a>
+  <a href="#linkedinshare" id = "linkedinshare" class="linkedin" title="Share on LinkedIn" rel="nofollow">
+    <svg class="icon">
+  <use xlink:href="#linkedin"></use>
+</svg>
+  </a>
+  <a href="https://blog.chongiofai.com/note/android/" title="Copy Link" class="link link_yank">
+    <svg class="icon">
+  <use xlink:href="#copy"></use>
+</svg>
+  </a>
+</div>
+
+    
+    <h2 id="android刷机">Android刷机</h2>
+<h3 id="环境">环境</h3>
+<ol>
+<li>
+<p>OnePlus8Pro</p>
+</li>
+<li>
+<p>Kali Rolling</p>
+</li>
+<li>
+<p>adb</p>
+<blockquote>
+<p>Android Debug Bridge version 1.0.39
+Version 1:8.1.0+r23-8
+Installed as /usr/lib/android-sdk/platform-tools/adb</p>
+<p><code>sudo apt install android-tools-adb</code></p>
+</blockquote>
+</li>
+<li>
+<p>fastboot</p>
+<blockquote>
+<p>fastboot version 1:8.1.0+r23-8
+Installed as /usr/lib/android-sdk/platform-tools/fastboot</p>
+<p><code>sudo apt install android-tools-fastboot</code></p>
+</blockquote>
+</li>
+</ol>
+<h3 id="基础">基础</h3>
+<ol>
+<li>
+<p>解锁OEM</p>
+<blockquote>
+<p><a href="https://source.android.com/setup/build/running">https://source.android.com/setup/build/running</a></p>
+</blockquote>
+</li>
+<li>
+<p>进入FastbootMode</p>
+</li>
+<li>
+<p>进入RecoveryMode</p>
+</li>
+<li>
+<p>安装Magisk/MagiskManager</p>
+<blockquote>
+<p>官方网站：　https://magiskmanager.com/</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="玩起来">玩起来</h3>
+<ol>
+<li>
+<p>官方OTA全量包中解压，此处使用<code>OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e.zip</code></p>
+<blockquote>
+<p><a href="https://www.oneplus.com/cn/support/softwareupgrade">https://www.oneplus.com/cn/support/softwareupgrade</a></p>
+<p><a href="https://www.oneplus.com/support/softwareupgrade">https://www.oneplus.com/support/softwareupgrade</a></p>
+</blockquote>
+</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>$ unzip OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e.zip -d OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e
+<span class="ln">2</span>$ tree OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e
+<span class="ln">3</span>OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e
+<span class="ln">4</span>├── META-INF
+<span class="ln">5</span>│   └── com
+<span class="ln">6</span>├── payload.bin
+<span class="ln">7</span>└── payload_properties.txt
+</code></pre></div><ol start="2">
+<li>
+<p>其中<code>payload.bin</code>是使用<code>protobuf</code>压缩的二进制<code>img</code>文件，使用<code>payload_dumper</code>解压出来<code>boot.img</code>、<code>recovery.img</code>及其他<code>img</code>文件</p>
+<blockquote>
+<p><a href="https://github.com/vm03/payload_dumper">https://github.com/vm03/payload_dumper</a></p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln"> 1</span>$ git clone https://github.com/vm03/payload_dumper.git payload_dumper
+<span class="ln"> 2</span>$ pip install -r requirements.txt
+<span class="ln"> 3</span>$ python payload_dumper.py payload.bin
+<span class="ln"> 4</span>$ tree payload_dumper
+<span class="ln"> 5</span>payload_dumper
+<span class="ln"> 6</span>├── old
+<span class="ln"> 7</span>├── output
+<span class="ln"> 8</span>│   ├── abl.img
+<span class="ln"> 9</span>│   ├── aop.img
+<span class="ln">10</span>│   ├── bluetooth.img
+<span class="ln">11</span>│   ├── boot.img
+<span class="ln">12</span>│   ├── cmnlib64.img
+<span class="ln">13</span>│   ├── cmnlib.img
+<span class="ln">14</span>│   ├── devcfg.img
+<span class="ln">15</span>│   ├── dsp.img
+<span class="ln">16</span>│   ├── dtbo.img
+<span class="ln">17</span>│   ├── featenabler.img
+<span class="ln">18</span>│   ├── hyp.img
+<span class="ln">19</span>│   ├── imagefv.img
+<span class="ln">20</span>│   ├── keymaster.img
+<span class="ln">21</span>│   ├── logo.img
+<span class="ln">22</span>│   ├── mdm_oem_stanvbk.img
+<span class="ln">23</span>│   ├── modem.img
+<span class="ln">24</span>│   ├── multiimgoem.img
+<span class="ln">25</span>│   ├── odm.img
+<span class="ln">26</span>│   ├── product.img
+<span class="ln">27</span>│   ├── qupfw.img
+<span class="ln">28</span>│   ├── recovery.img
+<span class="ln">29</span>│   ├── reserve.img
+<span class="ln">30</span>│   ├── spunvm.img
+<span class="ln">31</span>│   ├── storsec.img
+<span class="ln">32</span>│   ├── system_ext.img
+<span class="ln">33</span>│   ├── system.img
+<span class="ln">34</span>│   ├── tz.img
+<span class="ln">35</span>│   ├── uefisecapp.img
+<span class="ln">36</span>│   ├── vbmeta.img
+<span class="ln">37</span>│   ├── vbmeta_system.img
+<span class="ln">38</span>│   ├── vendor.img
+<span class="ln">39</span>│   ├── xbl_config.img
+<span class="ln">40</span>│   └── xbl.img
+<span class="ln">41</span>├── payload_dumper.py
+<span class="ln">42</span>├── README.md
+<span class="ln">43</span>├── requirements.txt
+<span class="ln">44</span>└── update_metadata_pb2.py
+</code></pre></div></li>
+<li>
+<p>其中在刷<code>Magisk</code>比较有用的是<code>boot.img</code>及<code>recovery.img</code>，可以使用<code>Magisk</code>对<code>boot.img</code>或<code>recovery.img</code>进行修改，修改为<code>magisk_patch.img</code>然后对相应分区<code>flash</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>$ adb push boot.img /storage/emulated/0/Download/
+<span class="ln">2</span># 手机操作`MagiskManager`修改`img`文件
+<span class="ln">3</span>$ adb pull /storage/emulated/0/Download/magisk_patch.img
+<span class="ln">4</span>$ adb reboot-fastboot
+<span class="ln">5</span># 手机重启至`FastbootMode`
+<span class="ln">6</span>$ sudo fastboot flash boot magisk_patch.img
+<span class="ln">7</span>$ sudo fastboot continue # sudo fastboot reboot # 也可
+</code></pre></div></li>
+</ol>
+<h3 id="研究一下">研究一下</h3>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">  1</span>$ adb shell
+<span class="ln">  2</span>OnePlus8Pro:/ $ mount
+<span class="ln">  3</span>/dev/block/dm-10 on / <span class="nb">type</span> ext4 <span class="o">(</span>ro,seclabel,relatime,discard<span class="o">)</span>
+<span class="ln">  4</span>tmpfs on /dev <span class="nb">type</span> tmpfs <span class="o">(</span>rw,seclabel,nosuid,relatime,size<span class="o">=</span>3837280k,nr_inodes<span class="o">=</span>959320,mode<span class="o">=</span>755<span class="o">)</span>
+<span class="ln">  5</span>devpts on /dev/pts <span class="nb">type</span> devpts <span class="o">(</span>rw,seclabel,relatime,mode<span class="o">=</span>600,ptmxmode<span class="o">=</span>000<span class="o">)</span>
+<span class="ln">  6</span>proc on /proc <span class="nb">type</span> proc <span class="o">(</span>rw,relatime,gid<span class="o">=</span>3009,hidepid<span class="o">=</span>2<span class="o">)</span>
+<span class="ln">  7</span>sysfs on /sys <span class="nb">type</span> sysfs <span class="o">(</span>rw,seclabel,relatime<span class="o">)</span>
+<span class="ln">  8</span>selinuxfs on /sys/fs/selinux <span class="nb">type</span> selinuxfs <span class="o">(</span>rw,relatime<span class="o">)</span>
+<span class="ln">  9</span>tmpfs on /mnt <span class="nb">type</span> tmpfs <span class="o">(</span>rw,seclabel,nosuid,nodev,noexec,relatime,size<span class="o">=</span>3837280k,nr_inodes<span class="o">=</span>959320,mode<span class="o">=</span>755,gid<span class="o">=</span>1000<span class="o">)</span>
+<span class="ln"> 10</span>tmpfs on /mnt/installer <span class="nb">type</span> tmpfs <span class="o">(</span>rw,seclabel,nosuid,nodev,noexec,relatime,size<span class="o">=</span>3837280k,nr_inodes<span class="o">=</span>959320,mode<span class="o">=</span>755,gid<span class="o">=</span>1000<span class="o">)</span>
+<span class="ln"> 11</span>tmpfs on /mnt/androidwritable <span class="nb">type</span> tmpfs <span class="o">(</span>rw,seclabel,nosuid,nodev,noexec,relatime,size<span class="o">=</span>3837280k,nr_inodes<span class="o">=</span>959320,mode<span class="o">=</span>755,gid<span class="o">=</span>1000<span class="o">)</span>
+<span class="ln"> 12</span>/dev/block/sda19 on /metadata <span class="nb">type</span> ext4 <span class="o">(</span>rw,sync,seclabel,nosuid,nodev,noatime,discard<span class="o">)</span>
+<span class="ln"> 13</span>/dev/block/dm-11 on /system_ext <span class="nb">type</span> ext4 <span class="o">(</span>ro,seclabel,relatime,discard<span class="o">)</span>
+<span class="ln"> 14</span>/dev/block/dm-12 on /product <span class="nb">type</span> ext4 <span class="o">(</span>ro,seclabel,relatime,discard<span class="o">)</span>
+<span class="ln"> 15</span>/dev/block/dm-13 on /vendor <span class="nb">type</span> ext4 <span class="o">(</span>ro,seclabel,relatime,discard<span class="o">)</span>
+<span class="ln"> 16</span>/dev/block/dm-14 on /odm <span class="nb">type</span> ext4 <span class="o">(</span>ro,seclabel,relatime,discard<span class="o">)</span>
+<span class="ln"> 17</span>overlay on /system/etc/buildinfo <span class="nb">type</span> overlay <span class="o">(</span>ro,context<span class="o">=</span>u:object_r:system_file:s0,relatime,lowerdir<span class="o">=</span>/odm/etc/buildinfo:/system/etc/buildinfo<span class="o">)</span>
+<span class="ln"> 18</span>tmpfs on /apex <span class="nb">type</span> tmpfs <span class="o">(</span>rw,seclabel,nosuid,nodev,noexec,relatime,size<span class="o">=</span>3837280k,nr_inodes<span class="o">=</span>959320,mode<span class="o">=</span>755<span class="o">)</span>
+<span class="ln"> 19</span>tmpfs on /linkerconfig <span class="nb">type</span> tmpfs <span class="o">(</span>rw,seclabel,nosuid,nodev,noexec,relatime,size<span class="o">=</span>3837280k,nr_inodes<span class="o">=</span>959320,mode<span class="o">=</span>755<span class="o">)</span>
+<span class="ln"> 20</span>none on /dev/blkio <span class="nb">type</span> cgroup <span class="o">(</span>rw,nosuid,nodev,noexec,relatime,blkio<span class="o">)</span>
+<span class="ln"> 21</span>none on /dev/cg2_bpf <span class="nb">type</span> cgroup2 <span class="o">(</span>rw,nosuid,nodev,noexec,relatime<span class="o">)</span>
+<span class="ln"> 22</span>none on /dev/cpuctl <span class="nb">type</span> cgroup <span class="o">(</span>rw,nosuid,nodev,noexec,relatime,cpu<span class="o">)</span>
+<span class="ln"> 23</span>none on /acct <span class="nb">type</span> cgroup <span class="o">(</span>rw,nosuid,nodev,noexec,relatime,cpuacct<span class="o">)</span>
+<span class="ln"> 24</span>none on /dev/cpuset <span class="nb">type</span> cgroup <span class="o">(</span>rw,nosuid,nodev,noexec,relatime,cpuset,noprefix,release_agent<span class="o">=</span>/sbin/cpuset_release_agent<span class="o">)</span>
+<span class="ln"> 25</span>none on /dev/freezer <span class="nb">type</span> cgroup <span class="o">(</span>rw,nosuid,nodev,noexec,relatime,freezer<span class="o">)</span>
+<span class="ln"> 26</span>none on /dev/iolimit <span class="nb">type</span> cgroup <span class="o">(</span>rw,nosuid,nodev,noexec,relatime,iolimit<span class="o">)</span>
+<span class="ln"> 27</span>none on /dev/memcg <span class="nb">type</span> cgroup <span class="o">(</span>rw,nosuid,nodev,noexec,relatime,memory<span class="o">)</span>
+<span class="ln"> 28</span>none on /dev/stune <span class="nb">type</span> cgroup <span class="o">(</span>rw,nosuid,nodev,noexec,relatime,schedtune<span class="o">)</span>
+<span class="ln"> 29</span>tracefs on /sys/kernel/tracing <span class="nb">type</span> tracefs <span class="o">(</span>rw,seclabel,relatime<span class="o">)</span>
+<span class="ln"> 30</span>none on /config <span class="nb">type</span> configfs <span class="o">(</span>rw,nosuid,nodev,noexec,relatime<span class="o">)</span>
+<span class="ln"> 31</span>binder on /dev/binderfs <span class="nb">type</span> binder <span class="o">(</span>rw,relatime,max<span class="o">=</span>1048576,stats<span class="o">=</span>global<span class="o">)</span>
+<span class="ln"> 32</span>none on /sys/fs/fuse/connections <span class="nb">type</span> fusectl <span class="o">(</span>rw,relatime<span class="o">)</span>
+<span class="ln"> 33</span>bpf on /sys/fs/bpf <span class="nb">type</span> bpf <span class="o">(</span>rw,nosuid,nodev,noexec,relatime<span class="o">)</span>
+<span class="ln"> 34</span>pstore on /sys/fs/pstore <span class="nb">type</span> pstore <span class="o">(</span>rw,seclabel,nosuid,nodev,noexec,relatime<span class="o">)</span>
+<span class="ln"> 35</span>none on /sys/fs/cgroup <span class="nb">type</span> tmpfs <span class="o">(</span>rw,seclabel,relatime,size<span class="o">=</span>3837280k,nr_inodes<span class="o">=</span>959320,mode<span class="o">=</span>750,gid<span class="o">=</span>1000<span class="o">)</span>
+<span class="ln"> 36</span>none on /sys/fs/cgroup/freezer <span class="nb">type</span> cgroup <span class="o">(</span>rw,relatime,freezer<span class="o">)</span>
+<span class="ln"> 37</span>/dev/block/sda9 on /mnt/vendor/modemdump <span class="nb">type</span> ext4 <span class="o">(</span>rw,seclabel,nosuid,nodev,noatime<span class="o">)</span>
+<span class="ln"> 38</span>/dev/block/sda2 on /mnt/vendor/persist <span class="nb">type</span> ext4 <span class="o">(</span>rw,seclabel,nosuid,nodev,noatime<span class="o">)</span>
+<span class="ln"> 39</span>/dev/block/sde4 on /vendor/firmware_mnt <span class="nb">type</span> vfat <span class="o">(</span>ro,context<span class="o">=</span>u:object_r:firmware_file:s0,relatime,uid<span class="o">=</span>1000,gid<span class="o">=</span>1000,fmask<span class="o">=</span>0337,dmask<span class="o">=</span>0227,codepage<span class="o">=</span>437,iocharset<span class="o">=</span>iso8859-1,shortname<span class="o">=</span>lower,errors<span class="o">=</span>remount-ro<span class="o">)</span>
+<span class="ln"> 40</span>/dev/block/sde9 on /vendor/dsp <span class="nb">type</span> ext4 <span class="o">(</span>ro,seclabel,nosuid,nodev,relatime<span class="o">)</span>
+<span class="ln"> 41</span>/dev/block/sde5 on /vendor/bt_firmware <span class="nb">type</span> vfat <span class="o">(</span>ro,context<span class="o">=</span>u:object_r:bt_firmware_file:s0,relatime,uid<span class="o">=</span>1002,gid<span class="o">=</span>3002,fmask<span class="o">=</span>0337,dmask<span class="o">=</span>0227,codepage<span class="o">=</span>437,iocharset<span class="o">=</span>iso8859-1,shortname<span class="o">=</span>lower,errors<span class="o">=</span>remount-ro<span class="o">)</span>
+<span class="ln"> 42</span>/dev/block/sda10 on /mnt/vendor/op2 <span class="nb">type</span> ext4 <span class="o">(</span>rw,seclabel,nosuid,nodev,noatime,data<span class="o">=</span>ordered<span class="o">)</span>
+<span class="ln"> 43</span>/dev/block/dm-15 on /data <span class="nb">type</span> f2fs <span class="o">(</span>rw,lazytime,seclabel,nosuid,nodev,noatime,background_gc<span class="o">=</span>on,discard,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,extent_cache,mode<span class="o">=</span>adaptive,active_logs<span class="o">=</span>6,reserve_root<span class="o">=</span>32768,resuid<span class="o">=</span>0,resgid<span class="o">=</span>1065,inlinecrypt,alloc_mode<span class="o">=</span>default,fsync_mode<span class="o">=</span>nobarrier<span class="o">)</span>
+<span class="ln"> 44</span>/dev/block/loop6 on /system/reserve <span class="nb">type</span> ext4 <span class="o">(</span>ro,context<span class="o">=</span>u:object_r:system_file:s0,relatime<span class="o">)</span>
+<span class="ln"> 45</span>tmpfs on /linkerconfig <span class="nb">type</span> tmpfs <span class="o">(</span>rw,seclabel,nosuid,nodev,noexec,relatime,size<span class="o">=</span>3837280k,nr_inodes<span class="o">=</span>959320,mode<span class="o">=</span>755<span class="o">)</span>
+<span class="ln"> 46</span>/dev/block/dm-15 on /data/user/0 <span class="nb">type</span> f2fs <span class="o">(</span>rw,lazytime,seclabel,nosuid,nodev,noatime,background_gc<span class="o">=</span>on,discard,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,extent_cache,mode<span class="o">=</span>adaptive,active_logs<span class="o">=</span>6,reserve_root<span class="o">=</span>32768,resuid<span class="o">=</span>0,resgid<span class="o">=</span>1065,inlinecrypt,alloc_mode<span class="o">=</span>default,fsync_mode<span class="o">=</span>nobarrier<span class="o">)</span>
+<span class="ln"> 47</span>tmpfs on /data_mirror <span class="nb">type</span> tmpfs <span class="o">(</span>rw,seclabel,nosuid,nodev,noexec,relatime,size<span class="o">=</span>3837280k,nr_inodes<span class="o">=</span>959320,mode<span class="o">=</span>700,gid<span class="o">=</span>1000<span class="o">)</span>
+<span class="ln"> 48</span>/dev/block/dm-15 on /data_mirror/data_ce/null <span class="nb">type</span> f2fs <span class="o">(</span>rw,lazytime,seclabel,nosuid,nodev,noatime,background_gc<span class="o">=</span>on,discard,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,extent_cache,mode<span class="o">=</span>adaptive,active_logs<span class="o">=</span>6,reserve_root<span class="o">=</span>32768,resuid<span class="o">=</span>0,resgid<span class="o">=</span>1065,inlinecrypt,alloc_mode<span class="o">=</span>default,fsync_mode<span class="o">=</span>nobarrier<span class="o">)</span>
+<span class="ln"> 49</span>/dev/block/dm-15 on /data_mirror/data_ce/null/0 <span class="nb">type</span> f2fs <span class="o">(</span>rw,lazytime,seclabel,nosuid,nodev,noatime,background_gc<span class="o">=</span>on,discard,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,extent_cache,mode<span class="o">=</span>adaptive,active_logs<span class="o">=</span>6,reserve_root<span class="o">=</span>32768,resuid<span class="o">=</span>0,resgid<span class="o">=</span>1065,inlinecrypt,alloc_mode<span class="o">=</span>default,fsync_mode<span class="o">=</span>nobarrier<span class="o">)</span>
+<span class="ln"> 50</span>/dev/block/dm-15 on /data_mirror/data_de/null <span class="nb">type</span> f2fs <span class="o">(</span>rw,lazytime,seclabel,nosuid,nodev,noatime,background_gc<span class="o">=</span>on,discard,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,extent_cache,mode<span class="o">=</span>adaptive,active_logs<span class="o">=</span>6,reserve_root<span class="o">=</span>32768,resuid<span class="o">=</span>0,resgid<span class="o">=</span>1065,inlinecrypt,alloc_mode<span class="o">=</span>default,fsync_mode<span class="o">=</span>nobarrier<span class="o">)</span>
+<span class="ln"> 51</span>/dev/block/dm-15 on /data_mirror/cur_profiles <span class="nb">type</span> f2fs <span class="o">(</span>rw,lazytime,seclabel,nosuid,nodev,noatime,background_gc<span class="o">=</span>on,discard,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,extent_cache,mode<span class="o">=</span>adaptive,active_logs<span class="o">=</span>6,reserve_root<span class="o">=</span>32768,resuid<span class="o">=</span>0,resgid<span class="o">=</span>1065,inlinecrypt,alloc_mode<span class="o">=</span>default,fsync_mode<span class="o">=</span>nobarrier<span class="o">)</span>
+<span class="ln"> 52</span>/dev/block/dm-16 on /apex/com.android.os.statsd@300901600 <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 53</span>/dev/block/dm-16 on /apex/com.android.os.statsd <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 54</span>/dev/block/loop8 on /apex/com.android.adbd@300900700 <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 55</span>/dev/block/loop8 on /apex/com.android.adbd <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 56</span>/dev/block/loop9 on /apex/com.android.i18n@1 <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 57</span>/dev/block/loop9 on /apex/com.android.i18n <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 58</span>/dev/block/loop10 on /apex/com.android.art@1 <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 59</span>/dev/block/loop10 on /apex/com.android.art <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 60</span>/dev/block/loop11 on /apex/com.android.tethering@300208500 <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 61</span>/dev/block/loop11 on /apex/com.android.tethering <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 62</span>/dev/block/loop12 on /apex/com.android.conscrypt@300900703 <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 63</span>/dev/block/loop12 on /apex/com.android.conscrypt <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 64</span>/dev/block/loop13 on /apex/com.android.wifi@300208500 <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 65</span>/dev/block/loop13 on /apex/com.android.wifi <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 66</span>/dev/block/loop14 on /apex/com.android.runtime@1 <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 67</span>/dev/block/loop14 on /apex/com.android.runtime <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 68</span>/dev/block/loop15 on /apex/com.android.resolv@300208500 <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 69</span>/dev/block/loop15 on /apex/com.android.resolv <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 70</span>/dev/block/loop16 on /apex/com.android.tzdata@300900700 <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 71</span>/dev/block/loop16 on /apex/com.android.tzdata <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 72</span>/dev/block/loop17 on /apex/com.android.sdkext@300900700 <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 73</span>/dev/block/loop17 on /apex/com.android.sdkext <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 74</span>/dev/block/loop18 on /apex/com.android.neuralnetworks@300900700 <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 75</span>/dev/block/loop18 on /apex/com.android.neuralnetworks <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 76</span>/dev/block/loop19 on /apex/com.android.ipsec@300900700 <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 77</span>/dev/block/loop19 on /apex/com.android.ipsec <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 78</span>/dev/block/loop20 on /apex/com.android.apex.cts.shim@1 <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 79</span>/dev/block/loop20 on /apex/com.android.apex.cts.shim <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 80</span>/dev/block/loop21 on /apex/com.android.media.swcodec@300900714 <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 81</span>/dev/block/loop21 on /apex/com.android.media.swcodec <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 82</span>/dev/block/loop22 on /apex/com.android.extservices@300900700 <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 83</span>/dev/block/loop22 on /apex/com.android.extservices <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 84</span>/dev/block/loop23 on /apex/com.android.mediaprovider@300900729 <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 85</span>/dev/block/loop23 on /apex/com.android.mediaprovider <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 86</span>/dev/block/loop24 on /apex/com.android.vndk.v30@1 <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 87</span>/dev/block/loop24 on /apex/com.android.vndk.v30 <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 88</span>/dev/block/loop25 on /apex/com.android.permission@300208500 <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 89</span>/dev/block/loop25 on /apex/com.android.permission <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 90</span>/dev/block/loop26 on /apex/com.android.media@300900700 <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 91</span>/dev/block/loop26 on /apex/com.android.media <span class="nb">type</span> ext4 <span class="o">(</span>ro,dirsync,seclabel,nodev,noatime<span class="o">)</span>
+<span class="ln"> 92</span>tmpfs on /storage <span class="nb">type</span> tmpfs <span class="o">(</span>rw,seclabel,nosuid,nodev,noexec,relatime,size<span class="o">=</span>3837280k,nr_inodes<span class="o">=</span>959320,mode<span class="o">=</span>755,gid<span class="o">=</span>1000<span class="o">)</span>
+<span class="ln"> 93</span>adb on /dev/usb-ffs/adb <span class="nb">type</span> functionfs <span class="o">(</span>rw,relatime<span class="o">)</span>
+<span class="ln"> 94</span>diag on /dev/ffs-diag <span class="nb">type</span> functionfs <span class="o">(</span>rw,relatime<span class="o">)</span>
+<span class="ln"> 95</span>diag_mdm on /dev/ffs-diag-1 <span class="nb">type</span> functionfs <span class="o">(</span>rw,relatime<span class="o">)</span>
+<span class="ln"> 96</span>diag_mdm2 on /dev/ffs-diag-2 <span class="nb">type</span> functionfs <span class="o">(</span>rw,relatime<span class="o">)</span>
+<span class="ln"> 97</span>/data/media on /mnt/runtime/default/emulated <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln"> 98</span>/data/media on /mnt/runtime/read/emulated <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>9997,multiuser,mask<span class="o">=</span>23,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln"> 99</span>/data/media on /mnt/runtime/write/emulated <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>9997,multiuser,mask<span class="o">=</span>7,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">100</span>/data/media on /mnt/runtime/full/emulated <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>9997,multiuser,mask<span class="o">=</span>7,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">101</span>/dev/fuse on /storage/emulated <span class="nb">type</span> fuse <span class="o">(</span>rw,lazytime,nosuid,nodev,noexec,noatime,user_id<span class="o">=</span>0,group_id<span class="o">=</span>0,allow_other<span class="o">)</span>
+<span class="ln">102</span>/dev/fuse on /mnt/installer/0/emulated <span class="nb">type</span> fuse <span class="o">(</span>rw,lazytime,nosuid,nodev,noexec,noatime,user_id<span class="o">=</span>0,group_id<span class="o">=</span>0,allow_other<span class="o">)</span>
+<span class="ln">103</span>/dev/fuse on /mnt/androidwritable/0/emulated <span class="nb">type</span> fuse <span class="o">(</span>rw,lazytime,nosuid,nodev,noexec,noatime,user_id<span class="o">=</span>0,group_id<span class="o">=</span>0,allow_other<span class="o">)</span>
+<span class="ln">104</span>/dev/fuse on /mnt/user/0/emulated <span class="nb">type</span> fuse <span class="o">(</span>rw,lazytime,nosuid,nodev,noexec,noatime,user_id<span class="o">=</span>0,group_id<span class="o">=</span>0,allow_other<span class="o">)</span>
+<span class="ln">105</span>/data/media on /mnt/pass_through/0/emulated <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>9997,multiuser,mask<span class="o">=</span>7,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">106</span>/data/media on /mnt/androidwritable/0/emulated/0/Android/data <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">107</span>/data/media on /mnt/installer/0/emulated/0/Android/data <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">108</span>/data/media on /storage/emulated/0/Android/data <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">109</span>/data/media on /mnt/user/0/emulated/0/Android/data <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">110</span>/data/media on /mnt/androidwritable/0/emulated/0/Android/obb <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">111</span>/data/media on /storage/emulated/0/Android/obb <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">112</span>/data/media on /mnt/user/0/emulated/0/Android/obb <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">113</span>/data/media on /mnt/installer/0/emulated/0/Android/obb <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>9997,multiuser,mask<span class="o">=</span>7,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">114</span>/dev/fuse on /mnt/installer/999/emulated <span class="nb">type</span> fuse <span class="o">(</span>rw,lazytime,nosuid,nodev,noexec,noatime,user_id<span class="o">=</span>0,group_id<span class="o">=</span>0,allow_other<span class="o">)</span>
+<span class="ln">115</span>/dev/fuse on /mnt/androidwritable/999/emulated <span class="nb">type</span> fuse <span class="o">(</span>rw,lazytime,nosuid,nodev,noexec,noatime,user_id<span class="o">=</span>0,group_id<span class="o">=</span>0,allow_other<span class="o">)</span>
+<span class="ln">116</span>/dev/fuse on /mnt/user/999/emulated <span class="nb">type</span> fuse <span class="o">(</span>rw,lazytime,nosuid,nodev,noexec,noatime,user_id<span class="o">=</span>0,group_id<span class="o">=</span>0,allow_other<span class="o">)</span>
+<span class="ln">117</span>/data/media on /mnt/pass_through/999/emulated <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>9997,multiuser,mask<span class="o">=</span>7,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">118</span>/data/media on /mnt/androidwritable/999/emulated/999/Android/data <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">119</span>/data/media on /mnt/installer/999/emulated/999/Android/data <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">120</span>/data/media on /mnt/user/999/emulated/999/Android/data <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">121</span>/data/media on /mnt/androidwritable/999/emulated/999/Android/obb <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">122</span>/data/media on /mnt/user/999/emulated/999/Android/obb <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">123</span>/data/media on /mnt/pass_through/0/ace-999 <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>9997,multiuser,mask<span class="o">=</span>7,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">124</span>/data/media on /mnt/pass_through/999/ace-0 <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>9997,multiuser,mask<span class="o">=</span>7,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">125</span>/dev/fuse on /mnt/installer/999/ace-0 <span class="nb">type</span> fuse <span class="o">(</span>rw,lazytime,nosuid,nodev,noexec,noatime,user_id<span class="o">=</span>0,group_id<span class="o">=</span>0,allow_other<span class="o">)</span>
+<span class="ln">126</span>/dev/fuse on /mnt/androidwritable/999/ace-0 <span class="nb">type</span> fuse <span class="o">(</span>rw,lazytime,nosuid,nodev,noexec,noatime,user_id<span class="o">=</span>0,group_id<span class="o">=</span>0,allow_other<span class="o">)</span>
+<span class="ln">127</span>/dev/fuse on /mnt/user/999/ace-0 <span class="nb">type</span> fuse <span class="o">(</span>rw,lazytime,nosuid,nodev,noexec,noatime,user_id<span class="o">=</span>0,group_id<span class="o">=</span>0,allow_other<span class="o">)</span>
+<span class="ln">128</span>/data/media on /mnt/androidwritable/0/emulated/0/Android/data <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">129</span>/data/media on /mnt/installer/0/emulated/0/Android/data <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">130</span>/data/media on /storage/emulated/0/Android/data <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">131</span>/data/media on /mnt/androidwritable/999/ace-0/Android/data <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">132</span>/data/media on /mnt/installer/999/ace-0/Android/data <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">133</span>/data/media on /mnt/user/0/emulated/0/Android/data <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">134</span>/data/media on /mnt/user/999/ace-0/Android/data <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">135</span>/data/media on /mnt/androidwritable/0/emulated/0/Android/obb <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">136</span>/data/media on /mnt/installer/0/emulated/0/Android/obb <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">137</span>/data/media on /storage/emulated/0/Android/obb <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">138</span>/data/media on /mnt/androidwritable/999/ace-0/Android/obb <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">139</span>/data/media on /mnt/installer/999/ace-0/Android/obb <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">140</span>/data/media on /mnt/user/0/emulated/0/Android/obb <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">141</span>/data/media on /mnt/user/999/ace-0/Android/obb <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">142</span>/dev/fuse on /storage/ace-999 <span class="nb">type</span> fuse <span class="o">(</span>rw,lazytime,nosuid,nodev,noexec,noatime,user_id<span class="o">=</span>0,group_id<span class="o">=</span>0,allow_other<span class="o">)</span>
+<span class="ln">143</span>/dev/fuse on /mnt/installer/0/ace-999 <span class="nb">type</span> fuse <span class="o">(</span>rw,lazytime,nosuid,nodev,noexec,noatime,user_id<span class="o">=</span>0,group_id<span class="o">=</span>0,allow_other<span class="o">)</span>
+<span class="ln">144</span>/dev/fuse on /mnt/androidwritable/0/ace-999 <span class="nb">type</span> fuse <span class="o">(</span>rw,lazytime,nosuid,nodev,noexec,noatime,user_id<span class="o">=</span>0,group_id<span class="o">=</span>0,allow_other<span class="o">)</span>
+<span class="ln">145</span>/dev/fuse on /mnt/user/0/ace-999 <span class="nb">type</span> fuse <span class="o">(</span>rw,lazytime,nosuid,nodev,noexec,noatime,user_id<span class="o">=</span>0,group_id<span class="o">=</span>0,allow_other<span class="o">)</span>
+<span class="ln">146</span>/data/media on /mnt/androidwritable/999/emulated/999/Android/data <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">147</span>/data/media on /mnt/installer/999/emulated/999/Android/data <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">148</span>/data/media on /mnt/androidwritable/0/ace-999/Android/data <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">149</span>/data/media on /mnt/installer/0/ace-999/Android/data <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">150</span>/data/media on /storage/ace-999/Android/data <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">151</span>/data/media on /mnt/user/999/emulated/999/Android/data <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">152</span>/data/media on /mnt/user/0/ace-999/Android/data <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">153</span>/data/media on /mnt/androidwritable/999/emulated/999/Android/obb <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">154</span>/data/media on /mnt/installer/999/emulated/999/Android/obb <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">155</span>/data/media on /mnt/androidwritable/0/ace-999/Android/obb <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">156</span>/data/media on /mnt/installer/0/ace-999/Android/obb <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">157</span>/data/media on /storage/ace-999/Android/obb <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">158</span>/data/media on /mnt/user/999/emulated/999/Android/obb <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">159</span>/data/media on /mnt/user/0/ace-999/Android/obb <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>1015,multiuser,mask<span class="o">=</span>6,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">160</span>/data/media on /mnt/installer/999/emulated/999/Android/obb <span class="nb">type</span> sdcardfs <span class="o">(</span>rw,nosuid,nodev,noexec,noatime,fsuid<span class="o">=</span>1023,fsgid<span class="o">=</span>1023,gid<span class="o">=</span>9997,multiuser,mask<span class="o">=</span>7,derive_gid,default_normal,unshared_obb<span class="o">)</span>
+<span class="ln">161</span>OnePlus8Pro:/ $ df
+<span class="ln">162</span>Filesystem        1K-blocks     Used Available Use% Mounted on
+<span class="ln">163</span>/dev/block/dm-10    <span class="m">1771636</span>  <span class="m">1766260</span>         <span class="m">0</span> 100% /
+<span class="ln">164</span>tmpfs               <span class="m">3837280</span>     <span class="m">1300</span>   <span class="m">3835980</span>   1% /dev
+<span class="ln">165</span>tmpfs               <span class="m">3837280</span>        <span class="m">0</span>   <span class="m">3837280</span>   0% /mnt
+<span class="ln">166</span>/dev/block/dm-11    <span class="m">1095456</span>  <span class="m">1092176</span>         <span class="m">0</span> 100% /system_ext
+<span class="ln">167</span>/dev/block/dm-12     <span class="m">460352</span>   <span class="m">458972</span>         <span class="m">0</span> 100% /product
+<span class="ln">168</span>/dev/block/dm-13    <span class="m">1565912</span>  <span class="m">1561168</span>         <span class="m">0</span> 100% /vendor
+<span class="ln">169</span>/dev/block/dm-14      <span class="m">86616</span>    <span class="m">86356</span>         <span class="m">0</span> 100% /odm
+<span class="ln">170</span>overlay               <span class="m">86616</span>    <span class="m">86356</span>         <span class="m">0</span> 100% /system/etc/buildinfo
+<span class="ln">171</span>tmpfs               <span class="m">3837280</span>        <span class="m">0</span>   <span class="m">3837280</span>   0% /apex
+<span class="ln">172</span>none                <span class="m">3837280</span>        <span class="m">0</span>   <span class="m">3837280</span>   0% /sys/fs/cgroup
+<span class="ln">173</span>/dev/block/sda2       <span class="m">27632</span>     <span class="m">5012</span>     <span class="m">21644</span>  19% /mnt/vendor/persist
+<span class="ln">174</span>/dev/block/dm-15  <span class="m">105515340</span> <span class="m">36082176</span>  <span class="m">69302092</span>  35% /data
+<span class="ln">175</span>/dev/block/loop6    <span class="m">1606296</span>  <span class="m">1469000</span>    <span class="m">104260</span>  94% /system/reserve
+<span class="ln">176</span>/dev/block/dm-16       <span class="m">1696</span>     <span class="m">1668</span>         <span class="m">0</span> 100% /apex/com.android.os.statsd@300901600
+<span class="ln">177</span>/dev/block/loop8       <span class="m">7728</span>     <span class="m">7700</span>         <span class="m">0</span> 100% /apex/com.android.adbd@300900700
+<span class="ln">178</span>/dev/block/loop9      <span class="m">24640</span>    <span class="m">24608</span>         <span class="m">0</span> 100% /apex/com.android.i18n@1
+<span class="ln">179</span>/dev/block/loop10     <span class="m">81560</span>    <span class="m">81532</span>         <span class="m">0</span> 100% /apex/com.android.art@1
+<span class="ln">180</span>/dev/block/loop11       <span class="m">748</span>      <span class="m">720</span>        <span class="m">16</span>  98% /apex/com.android.tethering@300208500
+<span class="ln">181</span>/dev/block/loop12      <span class="m">4744</span>     <span class="m">4716</span>         <span class="m">0</span> 100% /apex/com.android.conscrypt@300900703
+<span class="ln">182</span>/dev/block/loop13      <span class="m">4564</span>     <span class="m">4536</span>         <span class="m">0</span> 100% /apex/com.android.wifi@300208500
+<span class="ln">183</span>/dev/block/loop14      <span class="m">5116</span>     <span class="m">5080</span>         <span class="m">0</span> 100% /apex/com.android.runtime@1
+<span class="ln">184</span>/dev/block/loop15      <span class="m">2388</span>     <span class="m">2356</span>         <span class="m">0</span> 100% /apex/com.android.resolv@300208500
+<span class="ln">185</span>/dev/block/loop16       <span class="m">844</span>      <span class="m">816</span>        <span class="m">12</span>  99% /apex/com.android.tzdata@300900700
+<span class="ln">186</span>/dev/block/loop17       <span class="m">332</span>      <span class="m">300</span>        <span class="m">28</span>  92% /apex/com.android.sdkext@300900700
+<span class="ln">187</span>/dev/block/loop18      <span class="m">5360</span>     <span class="m">5328</span>         <span class="m">0</span> 100% /apex/com.android.neuralnetworks@300900700
+<span class="ln">188</span>/dev/block/loop19       <span class="m">560</span>      <span class="m">532</span>        <span class="m">20</span>  97% /apex/com.android.ipsec@300900700
+<span class="ln">189</span>/dev/block/loop20       <span class="m">232</span>       <span class="m">92</span>       <span class="m">136</span>  41% /apex/com.android.apex.cts.shim@1
+<span class="ln">190</span>/dev/block/loop21     <span class="m">18144</span>    <span class="m">18116</span>         <span class="m">0</span> 100% /apex/com.android.media.swcodec@300900714
+<span class="ln">191</span>/dev/block/loop22      <span class="m">3988</span>     <span class="m">3960</span>         <span class="m">0</span> 100% /apex/com.android.extservices@300900700
+<span class="ln">192</span>/dev/block/loop23      <span class="m">3884</span>     <span class="m">3856</span>         <span class="m">0</span> 100% /apex/com.android.mediaprovider@300900729
+<span class="ln">193</span>/dev/block/loop24    <span class="m">110756</span>   <span class="m">110724</span>         <span class="m">0</span> 100% /apex/com.android.vndk.v30@1
+<span class="ln">194</span>/dev/block/loop25     <span class="m">18520</span>    <span class="m">18488</span>         <span class="m">0</span> 100% /apex/com.android.permission@300208500
+<span class="ln">195</span>/dev/block/loop26      <span class="m">4488</span>     <span class="m">4460</span>         <span class="m">0</span> 100% /apex/com.android.media@300900700
+<span class="ln">196</span>/dev/fuse         <span class="m">105515340</span> <span class="m">36082176</span>  <span class="m">69302092</span>  35% /storage/emulated
+<span class="ln">197</span>/dev/fuse         <span class="m">105515340</span> <span class="m">36082176</span>  <span class="m">69302092</span>  35% /storage/ace-999
+<span class="ln">198</span>$ diff OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/
+<span class="ln">199</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/abl.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/abl.img differ
+<span class="ln">200</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/aop.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/aop.img differ
+<span class="ln">201</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/bluetooth.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/bluetooth.img differ
+<span class="ln">202</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/boot.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/boot.img differ
+<span class="ln">203</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/cmnlib64.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/cmnlib64.img differ
+<span class="ln">204</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/cmnlib.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/cmnlib.img differ
+<span class="ln">205</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/devcfg.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/devcfg.img differ
+<span class="ln">206</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/dsp.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/dsp.img differ
+<span class="ln">207</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/dtbo.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/dtbo.img differ
+<span class="ln">208</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/featenabler.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/featenabler.img differ
+<span class="ln">209</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/hyp.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/hyp.img differ
+<span class="ln">210</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/imagefv.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/imagefv.img differ
+<span class="ln">211</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/keymaster.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/keymaster.img differ
+<span class="ln">212</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/logo.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/logo.img differ
+<span class="ln">213</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/mdm_oem_stanvbk.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/mdm_oem_stanvbk.img differ
+<span class="ln">214</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/modem.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/modem.img differ
+<span class="ln">215</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/multiimgoem.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/multiimgoem.img differ
+<span class="ln">216</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/odm.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/odm.img differ
+<span class="ln">217</span>Only in OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/: opproduct.img
+<span class="ln">218</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/product.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/product.img differ
+<span class="ln">219</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/qupfw.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/qupfw.img differ
+<span class="ln">220</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/recovery.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/recovery.img differ
+<span class="ln">221</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/reserve.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/reserve.img differ
+<span class="ln">222</span>Only in OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output: storsec.img
+<span class="ln">223</span>Only in OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output: system_ext.img
+<span class="ln">224</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/system.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/system.img differ
+<span class="ln">225</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/tz.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/tz.img differ
+<span class="ln">226</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/uefisecapp.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/uefisecapp.img differ
+<span class="ln">227</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/vbmeta.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/vbmeta.img differ
+<span class="ln">228</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/vbmeta_system.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/vbmeta_system.img differ
+<span class="ln">229</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/vendor.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/vendor.img differ
+<span class="ln">230</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/xbl_config.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/xbl_config.img differ
+<span class="ln">231</span>Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/xbl.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/xbl.img differ
+<span class="ln">232</span>
+</code></pre></div><h3 id="后续">后续</h3>
+<ol>
+<li>
+<p>在后<code>/system</code>分区发现系统装不可删的<code>APP</code>，网上说提权后可删，因为<code>Android11</code>用<code>Magisk21.1</code>卡死了暂时没有继续尝试</p>
+</li>
+<li>
+<p>查看<code>img</code>文件，其实就是<code>ext</code>格式文件，在使用<code>mount system.img system</code>失败，好像还有一些格式问题，看有些说要用<code>simg2img</code>转一下，或者是么改完用<code>extfstools</code>重新打回<code>img</code></p>
+<blockquote>
+<p><a href="https://github.com/anestisb/android-simg2img">https://github.com/anestisb/android-simg2img</a></p>
+<p><a href="https://github.com/nlitsme/extfstools">https://github.com/nlitsme/extfstools</a></p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>$ file boot.img 
+<span class="ln">2</span>boot.img: Android bootimg, kernel (0x8000), ramdisk (0x1000000), page size: 4096, cmdline (androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disa)
+<span class="ln">3</span>$ file system.img 
+<span class="ln">4</span>system.img: Linux rev 1.0 ext2 filesystem data, UUID=4a50462e-52cf-5fab-87a1-49824cdf6b4f (extents) (large files) (huge files)
+</code></pre></div></li>
+<li>
+<p>对于其他，好像说华为分区方法不同，刷法也有不同，还有现在<code>Android</code>的<code>boot</code>分区有用<code>slot a</code>及<code>slot b</code>可以用<code>fastboot flash boot_a boot.img</code>或<code>flashboot flash boot boot.img --slot all</code>指定分区或者全刷</p>
+</li>
+<li>
+<p>还有好些可以玩的，对于各<code>img</code>文件解释分析，对<code>system.img</code>的修改，各种第三方<code>ROM</code>和使用不同的<code>Kernel</code>，先做得笔记<code># TODO:</code>一下，之后的未完待续</p>
+</li>
+</ol>
+<h3 id="缺陷">缺陷</h3>
+<ol>
+<li>Android11+Magisk20有严重卡顿无法正常使用</li>
+</ol>
+<h3 id="参考资料">参考资料</h3>
+<blockquote>
+<p><a href="https://forum.xda-developers.com/showthread.php?t=2277112">https://forum.xda-developers.com/showthread.php?t=2277112</a></p>
+<p><a href="https://forum.xda-developers.com/oneplus-8-pro">https://forum.xda-developers.com/oneplus-8-pro</a></p>
+<p><a href="https://forum.xda-developers.com/oneplus-8-pro/how-to/guide-how-to-root-oneplus-8-pro-twrp-t4083981">https://forum.xda-developers.com/oneplus-8-pro/how-to/guide-how-to-root-oneplus-8-pro-twrp-t4083981</a></p>
+<p><a href="https://magiskmanager.com/">https://magiskmanager.com/</a></p>
+<p><a href="https://topjohnwu.github.io/Magisk/install.html">https://topjohnwu.github.io/Magisk/install.html</a></p>
+<p><a href="https://topjohnwu.github.io/Magisk/install.html#magisk-in-recovery">https://topjohnwu.github.io/Magisk/install.html#magisk-in-recovery</a></p>
+<p><a href="https://source.android.com/setup/build/running">https://source.android.com/setup/build/running</a></p>
+</blockquote>
+<blockquote>
+<p>目标周更Blog的第一篇...不过写好了发布脚本了,为周更的懒又...溜了溜了</p>
+</blockquote>
+<p>TODO:</p>
+<ol>
+<li>OP8P system rollback to android 10 O2 OS</li>
+<li>install magisk to root</li>
+<li>install adblock</li>
+<li>modify system partition to install H2 applications</li>
+</ol>
+
+    
+      
+    
+  </article>
+<aside class="sidebar">
+  <section class="sidebar_inner">
+    <h2>c1f</h2>
+    <div>
+      路漫漫其修远兮 吾将上下而求索
+    </div>
+    <a href='https://blog.chongiofai.com/about/' class="button mt-1" role="button">Read More</a>
+    <h2 class="mt-4">Recent Posts</h2>
+    <ul class="flex-column">
+      <li>
+        <a href="https://blog.chongiofai.com/note/install-gentoo-and-archlinux/" class="nav-link">Install Gentoo&amp;ArchLinux</a>
+      </li>
+      <li>
+        <a href="https://blog.chongiofai.com/note/livecd/" class="nav-link">LiveCD</a>
+      </li>
+      <li>
+        <a href="https://blog.chongiofai.com/note/postwoman-cors/" class="nav-link">Postwoman CORS错误</a>
+      </li>
+      <li>
+        <a href="https://blog.chongiofai.com/note/v2ray-mitm/" class="nav-link">V2ray中间人尝试</a>
+      </li>
+      <li>
+        <a href="https://blog.chongiofai.com/note/grub/" class="nav-link">GRUB笔记</a>
+      </li>
+      <li>
+        <a href="https://blog.chongiofai.com/note/ngrok/" class="nav-link">Ngrok修改笔记</a>
+      </li>
+    </ul>
+    <div>
+      <h2 class="mt-4 taxonomy" id="categories-section">Categories</h2>
+      <nav class="tags_nav">
+        <a href='https://blog.chongiofai.com/categories/note/' class="post_tag button button_translucent">
+          NOTE
+          <span class="button_tally">6</span>
+        </a>
+        
+        <a href='https://blog.chongiofai.com/categories/bug/' class="post_tag button button_translucent">
+          BUG
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='https://blog.chongiofai.com/categories/sintaxe/' class="post_tag button button_translucent">
+          SINTAXE
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://blog.chongiofai.com/categories/syntax/' class="post_tag button button_translucent">
+          SYNTAX
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://blog.chongiofai.com/categories/temas/' class="post_tag button button_translucent">
+          TEMAS
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://blog.chongiofai.com/categories/themes/' class="post_tag button button_translucent">
+          THEMES
+          <span class="button_tally">1</span>
+        </a>
+        
+        
+      </nav>
+    </div>
+    <div>
+      <h2 class="mt-4 taxonomy" id="tags-section">Tags</h2>
+      <nav class="tags_nav">
+        <a href='https://blog.chongiofai.com/tags/markdown/' class="post_tag button button_translucent">
+          MARKDOWN
+          <span class="button_tally">3</span>
+        </a>
+        
+        <a href='https://blog.chongiofai.com/tags/android/' class="post_tag button button_translucent">
+          ANDROID
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='https://blog.chongiofai.com/tags/css/' class="post_tag button button_translucent">
+          CSS
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='https://blog.chongiofai.com/tags/html/' class="post_tag button button_translucent">
+          HTML
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='https://blog.chongiofai.com/tags/linux/' class="post_tag button button_translucent">
+          LINUX
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='https://blog.chongiofai.com/tags/adb/' class="post_tag button button_translucent">
+          ADB
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://blog.chongiofai.com/tags/archlinux/' class="post_tag button button_translucent">
+          ARCHLINUX
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://blog.chongiofai.com/tags/destacado/' class="post_tag button button_translucent">
+          DESTACADO
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://blog.chongiofai.com/tags/emoji/' class="post_tag button button_translucent">
+          EMOJI
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://blog.chongiofai.com/tags/fastboot/' class="post_tag button button_translucent">
+          FASTBOOT
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://blog.chongiofai.com/tags/featured/' class="post_tag button button_translucent">
+          FEATURED
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://blog.chongiofai.com/tags/gentoo/' class="post_tag button button_translucent">
+          GENTOO
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://blog.chongiofai.com/tags/grub/' class="post_tag button button_translucent">
+          GRUB
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://blog.chongiofai.com/tags/hacker/' class="post_tag button button_translucent">
+          HACKER
+          <span class="button_tally">1</span>
+        </a>
+        
+        
+        <br>
+        <div class="post_tags_toggle button">All Tags</div>
+        <div class="post_tags">
+          <div class="tags_list">
+            
+            <a href='https://blog.chongiofai.com/tags/adb/' class=" post_tag button button_translucent" data-position=1>ADB<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/android/' class=" post_tag button button_translucent" data-position=2>ANDROID<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/archlinux/' class=" post_tag button button_translucent" data-position=1>ARCHLINUX<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/css/' class=" post_tag button button_translucent" data-position=2>CSS<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/destacado/' class=" post_tag button button_translucent" data-position=1>DESTACADO<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/emoji/' class=" post_tag button button_translucent" data-position=1>EMOJI<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/fastboot/' class=" post_tag button button_translucent" data-position=1>FASTBOOT<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/featured/' class=" post_tag button button_translucent" data-position=1>FEATURED<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/gentoo/' class=" post_tag button button_translucent" data-position=1>GENTOO<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/grub/' class=" post_tag button button_translucent" data-position=1>GRUB<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/hacker/' class=" post_tag button button_translucent" data-position=1>HACKER<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/html/' class=" post_tag button button_translucent" data-position=2>HTML<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/index/' class=" post_tag button button_translucent" data-position=1>INDEX<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/install/' class=" post_tag button button_translucent" data-position=1>INSTALL<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/kali/' class=" post_tag button button_translucent" data-position=1>KALI<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/linux/' class=" post_tag button button_translucent" data-position=2>LINUX<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/livecd/' class=" post_tag button button_translucent" data-position=1>LIVECD<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/markdown/' class=" post_tag button button_translucent" data-position=3>MARKDOWN<span class="button_tally">3</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/ngrok/' class=" post_tag button button_translucent" data-position=1>NGROK<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/oneplus/' class=" post_tag button button_translucent" data-position=1>ONEPLUS<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/postwoman/' class=" post_tag button button_translucent" data-position=1>POSTWOMAN<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/privacy/' class=" post_tag button button_translucent" data-position=1>PRIVACY<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/root/' class=" post_tag button button_translucent" data-position=1>ROOT<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/shortcodes/' class=" post_tag button button_translucent" data-position=1>SHORTCODES<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/temas/' class=" post_tag button button_translucent" data-position=1>TEMAS<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/text/' class=" post_tag button button_translucent" data-position=1>TEXT<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://blog.chongiofai.com/tags/themes/' class=" post_tag button button_translucent" data-position=1>THEMES<span class="button_tally">1</span>
+            </a>
+            
+            <div class="tags_sort"><span title="sort alphabetically">[A~Z]</span><span title="sort by count">[0~9]</span>
+            </div>
+            <span class="tags_hide"><svg class="icon">
+            <use xlink:href="#closeme"></use>
+          </svg></span>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </section>
+</aside>
+
+</div>
+    </main><svg width="0" height="0" class="hidden">
+  <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
+    <path d="M437 0H75C33.648 0 0 33.648 0 75v362c0 41.352 33.648 75 75 75h151V331h-60v-90h60v-61c0-49.629 40.371-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.352 0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zm0 0"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.001 18.001" id="twitter">
+    <path d="M15.891 4.013c.808-.496 1.343-1.173 1.605-2.034a8.68 8.68 0 0 1-2.351.861c-.703-.756-1.593-1.14-2.66-1.14-1.043 0-1.924.366-2.643 1.078a3.56 3.56 0 0 0-1.076 2.605c0 .309.039.585.117.819-3.076-.105-5.622-1.381-7.628-3.837-.34.601-.51 1.213-.51 1.846 0 1.301.549 2.332 1.645 3.089-.625-.053-1.176-.211-1.645-.47 0 .929.273 1.705.82 2.388a3.623 3.623 0 0 0 2.115 1.291c-.312.08-.641.118-.979.118-.312 0-.533-.026-.664-.083.23.757.664 1.371 1.291 1.841a3.652 3.652 0 0 0 2.152.743C4.148 14.173 2.625 14.69.902 14.69c-.422 0-.721-.006-.902-.038 1.697 1.102 3.586 1.649 5.676 1.649 2.139 0 4.029-.542 5.674-1.626 1.645-1.078 2.859-2.408 3.639-3.974a10.77 10.77 0 0 0 1.172-4.892v-.468a7.788 7.788 0 0 0 1.84-1.921 8.142 8.142 0 0 1-2.11.593z"
+      ></path>
+  </symbol>
+  <symbol aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="mail">
+    <path  d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="calendar">
+    <path d="M452 40h-24V0h-40v40H124V0H84v40H60C26.916 40 0 66.916 0 100v352c0 33.084 26.916 60 60 60h392c33.084 0 60-26.916 60-60V100c0-33.084-26.916-60-60-60zm20 412c0 11.028-8.972 20-20 20H60c-11.028 0-20-8.972-20-20V188h432v264zm0-304H40v-48c0-11.028 8.972-20 20-20h24v40h40V80h264v40h40V80h24c11.028 0 20 8.972 20 20v48z"></path>
+    <path d="M76 230h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zM76 310h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zM76 390h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zm80-80h40v40h-40z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="github">
+    <path d="M255.968 5.329C114.624 5.329 0 120.401 0 262.353c0 113.536 73.344 209.856 175.104 243.872 12.8 2.368 17.472-5.568 17.472-12.384 0-6.112-.224-22.272-.352-43.712-71.2 15.52-86.24-34.464-86.24-34.464-11.616-29.696-28.416-37.6-28.416-37.6-23.264-15.936 1.728-15.616 1.728-15.616 25.696 1.824 39.2 26.496 39.2 26.496 22.848 39.264 59.936 27.936 74.528 21.344 2.304-16.608 8.928-27.936 16.256-34.368-56.832-6.496-116.608-28.544-116.608-127.008 0-28.064 9.984-51.008 26.368-68.992-2.656-6.496-11.424-32.64 2.496-68 0 0 21.504-6.912 70.4 26.336 20.416-5.696 42.304-8.544 64.096-8.64 21.728.128 43.648 2.944 64.096 8.672 48.864-33.248 70.336-26.336 70.336-26.336 13.952 35.392 5.184 61.504 2.56 68 16.416 17.984 26.304 40.928 26.304 68.992 0 98.72-59.84 120.448-116.864 126.816 9.184 7.936 17.376 23.616 17.376 47.584 0 34.368-.32 62.08-.32 70.496 0 6.88 4.608 14.88 17.6 12.352C438.72 472.145 512 375.857 512 262.353 512 120.401 397.376 5.329 255.968 5.329z"></path>
+  </symbol>
+  <symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="rss">
+    <circle cx="3.429" cy="20.571" r="3.429"></circle>
+    <path d="M11.429 24h4.57C15.999 15.179 8.821 8.001 0 8v4.572c6.302.001 11.429 5.126 11.429 11.428z"></path>
+    <path d="M24 24C24 10.766 13.234 0 0 0v4.571c10.714 0 19.43 8.714 19.43 19.429z"></path>
+  </symbol>
+  <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="linkedin">
+    <path d="M437 0H75C33.648 0 0 33.648 0 75v362c0 41.352 33.648 75 75 75h362c41.352 0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zM181 406h-60V196h60zm0-240h-60v-60h60zm210 240h-60V286c0-16.54-13.46-30-30-30s-30 13.46-30 30v120h-60V196h60v11.309C286.719 202.422 296.93 196 316 196c40.691.043 75 36.547 75 79.688zm0 0"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612" id="arrow">
+    <path d="M604.501 440.509L325.398 134.956c-5.331-5.357-12.423-7.627-19.386-7.27-6.989-.357-14.056 1.913-19.387 7.27L7.499 440.509c-9.999 10.024-9.999 26.298 0 36.323s26.223 10.024 36.222 0l262.293-287.164L568.28 476.832c9.999 10.024 26.222 10.024 36.221 0 9.999-10.023 9.999-26.298 0-36.323z"></path>
+  </symbol>
+  <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="carly">
+    <path d="M504.971 239.029L448 182.059V84c0-46.317-37.682-84-84-84h-44c-13.255 0-24 10.745-24 24s10.745 24 24 24h44c19.851 0 36 16.149 36 36v108c0 6.365 2.529 12.47 7.029 16.971L454.059 256l-47.029 47.029A24.002 24.002 0 0 0 400 320v108c0 19.851-16.149 36-36 36h-44c-13.255 0-24 10.745-24 24s10.745 24 24 24h44c46.318 0 84-37.683 84-84v-98.059l56.971-56.971c9.372-9.372 9.372-24.568 0-33.941zM112 192V84c0-19.851 16.149-36 36-36h44c13.255 0 24-10.745 24-24S205.255 0 192 0h-44c-46.318 0-84 37.683-84 84v98.059l-56.971 56.97c-9.373 9.373-9.373 24.568 0 33.941L64 329.941V428c0 46.317 37.682 84 84 84h44c13.255 0 24-10.745 24-24s-10.745-24-24-24h-44c-19.851 0-36-16.149-36-36V320c0-6.365-2.529-12.47-7.029-16.971L57.941 256l47.029-47.029A24.002 24.002 0 0 0 112 192z"></path>
+  </symbol>
+  <symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="copy">
+    <path d="M23 2.75A2.75 2.75 0 0 0 20.25 0H8.75A2.75 2.75 0 0 0 6 2.75v13.5A2.75 2.75 0 0 0 8.75 19h11.5A2.75 2.75 0 0 0 23 16.25zM18.25 14.5h-7.5a.75.75 0 0 1 0-1.5h7.5a.75.75 0 0 1 0 1.5zm0-3h-7.5a.75.75 0 0 1 0-1.5h7.5a.75.75 0 0 1 0 1.5zm0-3h-7.5a.75.75 0 0 1 0-1.5h7.5a.75.75 0 0 1 0 1.5z"></path>
+    <path d="M8.75 20.5a4.255 4.255 0 0 1-4.25-4.25V2.75c0-.086.02-.166.025-.25H3.75A2.752 2.752 0 0 0 1 5.25v16A2.752 2.752 0 0 0 3.75 24h12a2.752 2.752 0 0 0 2.75-2.75v-.75z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001" id="closeme">
+    <path d="M284.286 256.002L506.143 34.144c7.811-7.811 7.811-20.475 0-28.285-7.811-7.81-20.475-7.811-28.285 0L256 227.717 34.143 5.859c-7.811-7.811-20.475-7.811-28.285 0-7.81 7.811-7.811 20.475 0 28.285l221.857 221.857L5.858 477.859c-7.811 7.811-7.811 20.475 0 28.285a19.938 19.938 0 0 0 14.143 5.857 19.94 19.94 0 0 0 14.143-5.857L256 284.287l221.857 221.857c3.905 3.905 9.024 5.857 14.143 5.857s10.237-1.952 14.143-5.857c7.811-7.811 7.811-20.475 0-28.285L284.286 256.002z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="open-menu">
+    <path d="M492 236H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h472c11.046 0 20-8.954 20-20s-8.954-20-20-20zm0-160H20C8.954 76 0 84.954 0 96s8.954 20 20 20h472c11.046 0 20-8.954 20-20s-8.954-20-20-20zm0 320H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h472c11.046 0 20-8.954 20-20s-8.954-20-20-20z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="instagram">
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id=youtube>
+    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+  </symbol>
+</svg>
+
+<footer class="footer">
+  <div class="footer_inner wrap pale">
+    <img src='https://blog.chongiofai.com/icons/apple-touch-icon.png' class="icon icon_2 transparent">
+    <p>Copyright &copy;&nbsp;2020&nbsp;-&nbsp;<span class="year">2020</span>&nbsp;ON THE WAY. All Rights Reserved</p><a class="to_top" href="#documentTop">
+  <svg class="icon">
+  <use xlink:href="#arrow"></use>
+</svg>
+</a>
+
+  </div>
+</footer>
+    <script type="text/javascript" src="https://blog.chongiofai.com/js/bundle.min.6a08c8343858d2eda31d411dae09830156fb4931fca1a6193bd6a38793022c054d1fe1328935094111eb82f5963e29e361d263eafcd6bad51855bf1b0242c73d.js" integrity="sha512-agjINDhY0u2jHUEdrgmDAVb7STH8oaYZO9ajh5MCLAVNH&#43;EyiTUJQRHrgvWWPinjYdJj6vzWutUYVb8bAkLHPQ==" crossorigin="anonymous"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://blog.chongiofai.com/cn/about/</loc>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.chongiofai.com/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://blog.chongiofai.com/cn/about/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://blog.chongiofai.com/cn/buglog/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.chongiofai.com/buglog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://blog.chongiofai.com/cn/buglog/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://blog.chongiofai.com/cn/note/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.chongiofai.com/note/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://blog.chongiofai.com/cn/note/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://blog.chongiofai.com/cn/other/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.chongiofai.com/other/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://blog.chongiofai.com/cn/other/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://blog.chongiofai.com/cn/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.chongiofai.com/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://blog.chongiofai.com/cn/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://blog.chongiofai.com/cn/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.chongiofai.com/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://blog.chongiofai.com/cn/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://blog.chongiofai.com/cn/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.chongiofai.com/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://blog.chongiofai.com/cn/"
+                />
+  </url>
+  
+</urlset>

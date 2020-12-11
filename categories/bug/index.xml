@@ -1,82 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>bug on 在路上</title>
-    <link>http://blog.chongiofai.comf/categories/bug/</link>
-    <description>Recent content in bug on 在路上</description>
+    <title>bug on ON THE WAY</title>
+    <link>https://blog.chongiofai.com/categories/bug/</link>
+    <description>Recent content in bug on ON THE WAY</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 06 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.chongiofai.comf/categories/bug/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 09 Dec 2020 13:06:13 +0800</lastBuildDate><atom:link href="https://blog.chongiofai.com/categories/bug/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adb Device No Permissions</title>
+      <link>https://blog.chongiofai.com/buglog/adb-device-no-permissions/</link>
+      <pubDate>Wed, 09 Dec 2020 13:06:13 +0800</pubDate>
+      
+      <guid>https://blog.chongiofai.com/buglog/adb-device-no-permissions/</guid>
+      <description>[TOC]
+Question 1$ adb devices 2List of devices attached 300000000 no permissions (user in plugdev group; are your udev rules wrong?); see [http://developer.android.com/tools/device.html] Fixed 1$ sudo adb kill-server 2$ sudo pkill adb 3$ sudo adb start-server 4$ adb devices 5List of devices attached 600000000 unauthorized </description>
+    </item>
+    
     <item>
       <title>Postwoman CORS错误</title>
-      <link>http://blog.chongiofai.comf/post/postwoman-cors/</link>
+      <link>https://blog.chongiofai.com/note/postwoman-cors/</link>
       <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.chongiofai.comf/post/postwoman-cors/</guid>
-      <description>问题/Problem postwoman发送请求一直出现CORS，使用了postwoman extensions后只能在postwoman.io</description>
-    </item>
-    
-    <item>
-      <title>base64在Windows及Linux下错误</title>
-      <link>http://blog.chongiofai.comf/post/base64-encode-linux-and-windows/</link>
-      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://blog.chongiofai.comf/post/base64-encode-linux-and-windows/</guid>
-      <description>问题/Problem 在linux上echo &amp;quot;STRING&amp;quot;|base時與decode結果不一致,在python base6</description>
-    </item>
-    
-    <item>
-      <title>Docker有权限但权限不足</title>
-      <link>http://blog.chongiofai.comf/post/docker-permission-denied/</link>
-      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://blog.chongiofai.comf/post/docker-permission-denied/</guid>
-      <description>问题/Problem Docker容器中已分配權限,但無法訪問文件 原因/Reason Selinux限制 解决/Fix Selinux關閉或添加權限</description>
-    </item>
-    
-    <item>
-      <title>Nginx502错误</title>
-      <link>http://blog.chongiofai.comf/post/nginx-502-error/</link>
-      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://blog.chongiofai.comf/post/nginx-502-error/</guid>
-      <description>问题/Problem nginx 在轉發中報錯日志為 ... upstream sent too big header while reading response header from upstream ... 原因/Reason 反向代理的源站HTTP頭太大了 proxy_buffer_size proxy_buffers proxy_busy_buffers_size http://nginx.org/en/docs/http/ngx_http_proxy_module.html 解决/Fix 1 2 3</description>
-    </item>
-    
-    <item>
-      <title>PyYaml解释‘21:21`错误</title>
-      <link>http://blog.chongiofai.comf/post/pyyaml-parse-error/</link>
-      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://blog.chongiofai.comf/post/pyyaml-parse-error/</guid>
-      <description>问题/Problem 在docker-compose.yml中有 1 - 21:21 解析解果為int(1281)非str(&amp;quot;21:21&amp;quot;</description>
-    </item>
-    
-    <item>
-      <title>Protobuf在C/CPP下字符串截断</title>
-      <link>http://blog.chongiofai.comf/post/protobuf-c-cpp-string-error/</link>
-      <pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://blog.chongiofai.comf/post/protobuf-c-cpp-string-error/</guid>
-      <description>问题/Problem 程序在使用gRPC,protobuf時因為字符串中出現\0發現截斷現象 原因/Reason \0為C及C++中的字符串結束符</description>
-    </item>
-    
-    <item>
-      <title>GO解释YAML错误</title>
-      <link>http://blog.chongiofai.comf/post/go-yaml/</link>
-      <pubDate>Wed, 06 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://blog.chongiofai.comf/post/go-yaml/</guid>
-      <description>问题/Problem TODO 原因/Reason 因为解释调用了第三方包，但解释结构体中的属性为非公开属性，第三方包无法读职这些字段 解决/Fix 结构体</description>
-    </item>
-    
-    <item>
-      <title>Ngrok Tunnel No Found</title>
-      <link>http://blog.chongiofai.comf/post/ngrok-tunnel-not-found/</link>
-      <pubDate>Tue, 05 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://blog.chongiofai.comf/post/ngrok-tunnel-not-found/</guid>
-      <description>问题/Problem TODO 原因/Reason ngrokd服務器無法路由請求,在ngrok1.X中subdomain為三級域名,DNS需設置三級域</description>
+      <guid>https://blog.chongiofai.com/note/postwoman-cors/</guid>
+      <description>问题/Problem  postwoman发送请求一直出现CORS，使用了postwoman extensions后只能在postwoman.io中成功，自建失败  原因/Reason  浏览器安全策略，引至CORS 原生postwoman extensions只能对postwoman官方项目生效  1 &amp;#34;matches&amp;#34;: [ 2 &amp;#34;https://postwoman.io/&amp;#34;, 3 &amp;#34;https://postwoman.io/*&amp;#34;, 4 &amp;#34;https://postwoman.netlify.com/*&amp;#34;, 5 &amp;#34;https://postwoman.netlify.com/&amp;#34; 6 ], 解决/Fix  修改postwoman extensions，对自建增加支持  </description>
     </item>
     
   </channel>

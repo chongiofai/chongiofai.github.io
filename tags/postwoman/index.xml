@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>postwoman on 在路上</title>
-    <link>http://blog.chongiofai.comf/tags/postwoman/</link>
-    <description>Recent content in postwoman on 在路上</description>
+    <title>postwoman on ON THE WAY</title>
+    <link>https://blog.chongiofai.com/tags/postwoman/</link>
+    <description>Recent content in postwoman on ON THE WAY</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 06 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.chongiofai.comf/tags/postwoman/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 06 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.chongiofai.com/tags/postwoman/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Postwoman CORS错误</title>
-      <link>http://blog.chongiofai.comf/post/postwoman-cors/</link>
+      <link>https://blog.chongiofai.com/note/postwoman-cors/</link>
       <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.chongiofai.comf/post/postwoman-cors/</guid>
-      <description>问题/Problem postwoman发送请求一直出现CORS，使用了postwoman extensions后只能在postwoman.io</description>
+      <guid>https://blog.chongiofai.com/note/postwoman-cors/</guid>
+      <description>问题/Problem  postwoman发送请求一直出现CORS，使用了postwoman extensions后只能在postwoman.io中成功，自建失败  原因/Reason  浏览器安全策略，引至CORS 原生postwoman extensions只能对postwoman官方项目生效  1 &amp;#34;matches&amp;#34;: [ 2 &amp;#34;https://postwoman.io/&amp;#34;, 3 &amp;#34;https://postwoman.io/*&amp;#34;, 4 &amp;#34;https://postwoman.netlify.com/*&amp;#34;, 5 &amp;#34;https://postwoman.netlify.com/&amp;#34; 6 ], 解决/Fix  修改postwoman extensions，对自建增加支持  </description>
     </item>
     
   </channel>
