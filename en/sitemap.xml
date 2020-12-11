@@ -3,6 +3,56 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://chongiofai.github.io/</loc>
+    <lastmod>2020-12-12T00:12:28+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://chongiofai.github.io/cn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://chongiofai.github.io/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://chongiofai.github.io/home/2021-todo/</loc>
+    <lastmod>2020-12-12T00:12:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chongiofai.github.io/categories/</loc>
+    <lastmod>2020-12-12T00:12:28+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://chongiofai.github.io/cn/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://chongiofai.github.io/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://chongiofai.github.io/categories/flag/</loc>
+    <lastmod>2020-12-12T00:12:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chongiofai.github.io/home/</loc>
+    <lastmod>2020-12-12T00:12:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chongiofai.github.io/categories/todo/</loc>
+    <lastmod>2020-12-12T00:12:28+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://chongiofai.github.io/about/</loc>
     <lastmod>2020-12-11T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -14,21 +64,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://chongiofai.github.io/about/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://chongiofai.github.io/</loc>
-    <lastmod>2020-12-09T13:06:13+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://chongiofai.github.io/cn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://chongiofai.github.io/"
                 />
   </url>
   
@@ -50,21 +85,6 @@
   <url>
     <loc>https://chongiofai.github.io/buglog/</loc>
     <lastmod>2020-12-09T13:06:13+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://chongiofai.github.io/categories/</loc>
-    <lastmod>2020-12-09T13:06:13+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://chongiofai.github.io/cn/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://chongiofai.github.io/categories/"
-                />
   </url>
   
   <url>

@@ -6,7 +6,16 @@
     <description>Recent content on ON THE WAY</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 09 Dec 2020 13:06:13 +0800</lastBuildDate><atom:link href="https://chongiofai.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Dec 2020 00:12:28 +0800</lastBuildDate><atom:link href="https://chongiofai.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2021 TODO</title>
+      <link>https://chongiofai.github.io/home/2021-todo/</link>
+      <pubDate>Sat, 12 Dec 2020 00:12:28 +0800</pubDate>
+      
+      <guid>https://chongiofai.github.io/home/2021-todo/</guid>
+      <description>Private  跑步150公里 看书12本  Develop  搭建个人GitServer 个人CI/CD平台 Blog支持评论/留言(Gitment), 搜索(Algolia) 完成ngrok的修改 每周更新Blog  </description>
+    </item>
+    
     <item>
       <title>About</title>
       <link>https://chongiofai.github.io/about/</link>
