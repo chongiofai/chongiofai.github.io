@@ -63,6 +63,20 @@
   </url>
   
   <url>
+    <loc>https://chongiofai.github.io/cn/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://chongiofai.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://chongiofai.github.io/cn/"
+                />
+  </url>
+  
+  <url>
     <loc>https://chongiofai.github.io/cn/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -87,20 +101,6 @@
                 rel="alternate"
                 hreflang="cn"
                 href="https://chongiofai.github.io/cn/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://chongiofai.github.io/cn/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://chongiofai.github.io/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://chongiofai.github.io/cn/"
                 />
   </url>
   
