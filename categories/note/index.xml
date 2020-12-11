@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>note on ON THE WAY</title>
-    <link>https://blog.chongiofai.com/categories/note/</link>
+    <link>https://chongiofai.github.io/categories/note/</link>
     <description>Recent content in note on ON THE WAY</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 06 Dec 2020 09:13:12 +0800</lastBuildDate><atom:link href="https://blog.chongiofai.com/categories/note/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Dec 2020 09:13:12 +0800</lastBuildDate><atom:link href="https://chongiofai.github.io/categories/note/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install Gentoo&amp;ArchLinux</title>
-      <link>https://blog.chongiofai.com/note/install-gentoo-and-archlinux/</link>
+      <link>https://chongiofai.github.io/note/install-gentoo-and-archlinux/</link>
       <pubDate>Sun, 06 Dec 2020 09:13:12 +0800</pubDate>
       
-      <guid>https://blog.chongiofai.com/note/install-gentoo-and-archlinux/</guid>
+      <guid>https://chongiofai.github.io/note/install-gentoo-and-archlinux/</guid>
       <description>Install Gentoo&amp;amp;ArchLinux  看了一些文档和资料,纪录一下对于Linux或者OS上的理解,原本了解到Gentoo这个发行版,然后再看到Archlinux,在上周末装了Archlinux(NetworkManager卡了在Dbus Error...),今周再试了一下Gentoo(还没装完...),先纪录一下未完待续吧...
   Gentoo VS Archlinux   https://www.gentoo.org/
 https://www.archlinux.org/
@@ -32,10 +32,10 @@ GRUB - Grand Unified Bootloader executes Kernel</description>
     
     <item>
       <title>LiveCD</title>
-      <link>https://blog.chongiofai.com/note/livecd/</link>
+      <link>https://chongiofai.github.io/note/livecd/</link>
       <pubDate>Sun, 06 Dec 2020 09:13:12 +0800</pubDate>
       
-      <guid>https://blog.chongiofai.com/note/livecd/</guid>
+      <guid>https://chongiofai.github.io/note/livecd/</guid>
       <description>LiveCD Install LiveCD 1dd status=progress if=livecd.iso of=/dev/sdaX bs=512 2fdisk ... # TODO: fix disk size 3cryptsetup luksFormt /dev/sdaX 4cryptsetup open persistence /dev/sdaX 5mkfs.ext4 -L persistence /dev/mapper/persistence 6mount /dev/mapper/persistence /mnt/livecd 7echo &amp;#34;/ union&amp;#34; &amp;gt; /mnt/livecd/persistence.conf 8umount /dev/mapper/persistence 9cryptsetup close persistence 参考资料 https://www.kali.org/downloads/
 https://www.kali.org/docs/usb/kali-linux-live-usb-install-linux/
 https://www.kali.org/docs/usb/kali-linux-live-usb-persistence/
@@ -44,10 +44,10 @@ https://www.kali.org/docs/usb/kali-linux-live-usb-persistence/
     
     <item>
       <title>Android刷机</title>
-      <link>https://blog.chongiofai.com/note/android/</link>
+      <link>https://chongiofai.github.io/note/android/</link>
       <pubDate>Mon, 23 Nov 2020 19:18:05 +0800</pubDate>
       
-      <guid>https://blog.chongiofai.com/note/android/</guid>
+      <guid>https://chongiofai.github.io/note/android/</guid>
       <description>Android刷机 环境   OnePlus8Pro
   Kali Rolling
   adb
@@ -67,10 +67,10 @@ sudo apt install android-tools-fastboot
     
     <item>
       <title>V2ray中间人尝试</title>
-      <link>https://blog.chongiofai.com/note/v2ray-mitm/</link>
+      <link>https://chongiofai.github.io/note/v2ray-mitm/</link>
       <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.chongiofai.com/note/v2ray-mitm/</guid>
+      <guid>https://chongiofai.github.io/note/v2ray-mitm/</guid>
       <description>前两天有新闻JD和GITHUB被劫持，和最近生活中有些情况令我想到关于劫持页面重导向试试实现(其实想指定情况下在我手机上劫持微信跳转页面到我自己的页面下
  环境  V2Ray 4.22.1 (V2Fly, a community-driven edition of V2Ray.) Custom (go1.13.8 linux/amd64)  实现  v2配置 设置outbounds规则，设置劫持转发的目标点，在routing设置转发   https://www.v2fly.org/chapter_02/protocols/freedom.html
  1 &amp;#34;outbounds&amp;#34;: [ 2 { 3 &amp;#34;protocol&amp;#34;: &amp;#34;freedom&amp;#34;, 4 &amp;#34;settings&amp;#34;: { 5 &amp;#34;redirect&amp;#34;: &amp;#34;127.0.0.1:58885&amp;#34; 6 }, 7 &amp;#34;tag&amp;#34;: &amp;#34;mitm&amp;#34; 8 } 9 ],  https://www.v2fly.org/chapter_02/03_routing.html
@@ -79,10 +79,10 @@ sudo apt install android-tools-fastboot
     
     <item>
       <title>GRUB笔记</title>
-      <link>https://blog.chongiofai.com/note/grub/</link>
+      <link>https://chongiofai.github.io/note/grub/</link>
       <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.chongiofai.com/note/grub/</guid>
+      <guid>https://chongiofai.github.io/note/grub/</guid>
       <description>之前grub搞了个在U盘上引就安装系统，不过引导不了windows的安装装，和和和之前又洗了，之后再玩玩，也想想要怎么玩，因为也想搞个linux在U盘上 不过今天看到双系统的引导,一来想把倒数关了,免自己老要开机时守那几秒,和上想是找方法想弄成,自动启动上次开启的系统,和和也再好好看看grub
  目录  自已之前看过一次文档(都忘了),现在再撸一下目撸猜一下,纪录一下
   /boot/grub/* 引导盘引导程序核心位置，所有引导需要的材料都放在这里了 /boot/grub/grub.cfg  引导时的配置都看他了，不过好像是从grub2开始这个是自动生成的，改这如果重刷了还是会改回去，不优雅  /etc/grub.d/* 好像从grub2版本可以用命令按这个路径下的配置把/boot/grub/grub.cfg渲染出来， 看下README  1All executable files in this directory are processed in shell expansion order. 2 3 00_*: Reserved for 00_header. 4 10_*: Native boot entries. 5 20_*: Third party apps (e.g. memtest86+). 6 7 The number namespace in-between is configurable by system installer and/or 8 administrator. For example, you can add an entry to boot another OS as 9 01_otheros, 11_otheros, etc, depending on the position you want it to occupy in 10 the menu; and then adjust the default setting via /etc/default/grub.</description>
@@ -90,10 +90,10 @@ sudo apt install android-tools-fastboot
     
     <item>
       <title>Ngrok修改笔记</title>
-      <link>https://blog.chongiofai.com/note/ngrok/</link>
+      <link>https://chongiofai.github.io/note/ngrok/</link>
       <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.chongiofai.com/note/ngrok/</guid>
+      <guid>https://chongiofai.github.io/note/ngrok/</guid>
       <description>client  Run-SetupModel-newClientModel建立ngrokd-ngroko信道   好像無加密
  ctl-clientModel.Run-control開始使用model向ngrokd建立連接   newClientModel??為什么給configPath不是config,因為服务器給出新authToken更新
  clientModel.update更新control   tunnel下分拆可能會引到重復NewTunnel Proxy Agent SaveAuthToken保存完Token不更新內存中的conifg???

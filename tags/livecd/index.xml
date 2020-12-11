@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>livecd on ON THE WAY</title>
-    <link>https://blog.chongiofai.com/tags/livecd/</link>
+    <link>https://chongiofai.github.io/tags/livecd/</link>
     <description>Recent content in livecd on ON THE WAY</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 06 Dec 2020 09:13:12 +0800</lastBuildDate><atom:link href="https://blog.chongiofai.com/tags/livecd/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Dec 2020 09:13:12 +0800</lastBuildDate><atom:link href="https://chongiofai.github.io/tags/livecd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LiveCD</title>
-      <link>https://blog.chongiofai.com/note/livecd/</link>
+      <link>https://chongiofai.github.io/note/livecd/</link>
       <pubDate>Sun, 06 Dec 2020 09:13:12 +0800</pubDate>
       
-      <guid>https://blog.chongiofai.com/note/livecd/</guid>
+      <guid>https://chongiofai.github.io/note/livecd/</guid>
       <description>LiveCD Install LiveCD 1dd status=progress if=livecd.iso of=/dev/sdaX bs=512 2fdisk ... # TODO: fix disk size 3cryptsetup luksFormt /dev/sdaX 4cryptsetup open persistence /dev/sdaX 5mkfs.ext4 -L persistence /dev/mapper/persistence 6mount /dev/mapper/persistence /mnt/livecd 7echo &amp;#34;/ union&amp;#34; &amp;gt; /mnt/livecd/persistence.conf 8umount /dev/mapper/persistence 9cryptsetup close persistence 参考资料 https://www.kali.org/downloads/
 https://www.kali.org/docs/usb/kali-linux-live-usb-install-linux/
 https://www.kali.org/docs/usb/kali-linux-live-usb-persistence/
