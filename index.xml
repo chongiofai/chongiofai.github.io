@@ -18,16 +18,6 @@ Commit Message Conventional Commits Commit First Line Prefix  build: Changes tha
     </item>
     
     <item>
-      <title>2021 TODO</title>
-      <link>https://chongiofai.github.io/home/2021-todo/</link>
-      <pubDate>Sat, 12 Dec 2020 00:12:28 +0800</pubDate>
-      
-      <guid>https://chongiofai.github.io/home/2021-todo/</guid>
-      <description>Private  跑步150公里 看书12本 日总结,周报,月报  Develop  搭建个人GitServer 个人CI/CD平台 Blog支持评论/留言(Gitment), 搜索(Algolia) 完成ngrok的修改 每周更新Blog  Work Keywork  引擎 DevOps 私有化   updated 2020-12-12
- </description>
-    </item>
-    
-    <item>
       <title>About</title>
       <link>https://chongiofai.github.io/about/</link>
       <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
