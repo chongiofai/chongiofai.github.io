@@ -16,14 +16,5 @@
       <description>Question 1$ adb devices 2List of devices attached 300000000 no permissions (user in plugdev group; are your udev rules wrong?); see [http://developer.android.com/tools/device.html] Fixed 1$ sudo adb kill-server 2$ sudo pkill adb 3$ sudo adb start-server 4$ adb devices 5List of devices attached 600000000 unauthorized </description>
     </item>
     
-    <item>
-      <title>Postwoman CORS错误</title>
-      <link>https://chongiofai.github.io/note/postwoman-cors/</link>
-      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://chongiofai.github.io/note/postwoman-cors/</guid>
-      <description>问题/Problem  postwoman发送请求一直出现CORS，使用了postwoman extensions后只能在postwoman.io中成功，自建失败  原因/Reason  浏览器安全策略，引至CORS 原生postwoman extensions只能对postwoman官方项目生效  1 &amp;#34;matches&amp;#34;: [ 2 &amp;#34;https://postwoman.io/&amp;#34;, 3 &amp;#34;https://postwoman.io/*&amp;#34;, 4 &amp;#34;https://postwoman.netlify.com/*&amp;#34;, 5 &amp;#34;https://postwoman.netlify.com/&amp;#34; 6 ], 解决/Fix  修改postwoman extensions，对自建增加支持  </description>
-    </item>
-    
   </channel>
 </rss>

@@ -8,11 +8,11 @@
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
     <lastBuildDate>Mon, 23 Nov 2020 19:18:05 +0800</lastBuildDate><atom:link href="https://chongiofai.github.io/tags/root/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Android刷机</title>
-      <link>https://chongiofai.github.io/note/android/</link>
+      <title>Android Flashing Device</title>
+      <link>https://chongiofai.github.io/note/android-flusing-device/</link>
       <pubDate>Mon, 23 Nov 2020 19:18:05 +0800</pubDate>
       
-      <guid>https://chongiofai.github.io/note/android/</guid>
+      <guid>https://chongiofai.github.io/note/android-flusing-device/</guid>
       <description>Android刷机 环境   OnePlus8Pro
   Kali Rolling
   adb

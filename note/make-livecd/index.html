@@ -1,8 +1,8 @@
 
 <!DOCTYPE html>
-<html lang="en" data-figures="">
+<html lang="en" data-figures="" class="page">
   <head>
-<title>bug | ON THE WAY</title>
+<title>LiveCD | ON THE WAY</title>
 <meta charset="utf-8">
 <meta name="generator" content="Hugo 0.79.0" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -10,13 +10,13 @@
 <meta property="og:locale" content="en" />
 
 <meta property="og:type" content="article">
-<meta name="description" content="">
+<meta name="description" content="LiveCD Install LiveCD 1dd status=progress if=livecd.iso of=/dev/sdaX bs=512 2fdisk ... # TODO: fix disk size 3cryptsetup luksFormt /dev/sdaX 4cryptsetup open …">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="">
-<meta name="twitter:title" content="bug" />
-<meta property="og:url" content="https://chongiofai.github.io/categories/bug/" />
-<meta property="og:title" content="bug" />
-<meta property="og:description" content="" />
+<meta name="twitter:title" content="LiveCD" />
+<meta property="og:url" content="https://chongiofai.github.io/note/make-livecd/" />
+<meta property="og:title" content="LiveCD" />
+<meta property="og:description" content="LiveCD Install LiveCD 1dd status=progress if=livecd.iso of=/dev/sdaX bs=512 2fdisk ... # TODO: fix disk size 3cryptsetup luksFormt /dev/sdaX 4cryptsetup open …" />
 <meta property="og:image" content="https://chongiofai.github.io/images/thumbnail.png" />
 <link rel="apple-touch-icon" sizes="180x180" href='https://chongiofai.github.io/icons/apple-touch-icon.png'>
 <link rel="icon" type="image/png" sizes="32x32" href='https://chongiofai.github.io/icons/favicon-32x32.png'>
@@ -25,8 +25,7 @@
 <meta name="msapplication-TileColor" content="#002538">
 <meta name="theme-color" content="#002538">
 
-<link rel="canonical" href="https://chongiofai.github.io/categories/bug/">
-<link rel="alternate" type="application/rss+xml" href="https://chongiofai.github.io/categories/bug/index.xml" title="ON THE WAY" />
+<link rel="canonical" href="https://chongiofai.github.io/note/make-livecd/">
 
     
 
@@ -118,40 +117,81 @@
 </header>
 
     <main>
-
+  
 <div class="grid-inverse wrap content">
-  <ul class="posts" id="posts">
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://chongiofai.github.io/buglog/adb-device-no-permissions/">Adb Device No Permissions</a>
-      </h3>
-      <div class="post_meta">
+  <article class="post_content">
+    <h1 class="post_title">LiveCD</h1><div class="post_meta">
   <svg class="icon">
   <use xlink:href="#calendar"></use>
 </svg>
   <span class="post_date">
-    2020-12-09</span>
-    <a href='https://chongiofai.github.io/tags/android' class="post_tag button button_translucent">android
+    2020-12-06</span>
+    <a href='https://chongiofai.github.io/tags/livecd' class="post_tag button button_translucent">livecd
+    </a>
+    <a href='https://chongiofai.github.io/tags/kali' class="post_tag button button_translucent">kali
+    </a>
+    <a href='https://chongiofai.github.io/tags/linux' class="post_tag button button_translucent">linux
     </a>
 </div>
 
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">Question 1$ adb devices 2List of devices attached 300000000 no permissions (user in plugdev group; are your udev rules wrong?); see [http://developer.android.com/tools/device.html] Fixed 1$ sudo adb kill-server 2$ sudo pkill adb 3$ sudo adb start-server 4$ adb devices 5List of devices attached 600000000 unauthorized </p>
-          <a href="https://chongiofai.github.io/buglog/adb-device-no-permissions/" class="excerpt_more button">Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
+    
+<div class="post_share">
+  Share on:
+  <a href="https://twitter.com/intent/tweet?text=LiveCD&url=https%3a%2f%2fchongiofai.github.io%2fnote%2fmake-livecd%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
+    <svg class="icon">
+  <use xlink:href="#twitter"></use>
+</svg>
+  </a>
+  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fchongiofai.github.io%2fnote%2fmake-livecd%2f&t=LiveCD" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
+    <svg class="icon">
+  <use xlink:href="#facebook"></use>
+</svg>
+  </a>
+  <a href="#linkedinshare" id = "linkedinshare" class="linkedin" title="Share on LinkedIn" rel="nofollow">
+    <svg class="icon">
+  <use xlink:href="#linkedin"></use>
+</svg>
+  </a>
+  <a href="https://chongiofai.github.io/note/make-livecd/" title="Copy Link" class="link link_yank">
+    <svg class="icon">
+  <use xlink:href="#copy"></use>
+</svg>
+  </a>
+</div>
 
-    <li>
+    
+    <h1 id="livecd">LiveCD</h1>
+<h2 id="install-livecd">Install LiveCD</h2>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>dd <span class="nv">status</span><span class="o">=</span>progress <span class="k">if</span><span class="o">=</span>livecd.iso <span class="nv">of</span><span class="o">=</span>/dev/sdaX <span class="nv">bs</span><span class="o">=</span><span class="m">512</span>
+<span class="ln">2</span>fdisk ... <span class="c1"># TODO: fix disk size</span>
+<span class="ln">3</span>cryptsetup luksFormt /dev/sdaX
+<span class="ln">4</span>cryptsetup open persistence /dev/sdaX
+<span class="ln">5</span>mkfs.ext4 -L persistence /dev/mapper/persistence
+<span class="ln">6</span>mount /dev/mapper/persistence /mnt/livecd
+<span class="ln">7</span><span class="nb">echo</span> <span class="s2">&#34;/ union&#34;</span> &gt; /mnt/livecd/persistence.conf
+<span class="ln">8</span>umount /dev/mapper/persistence
+<span class="ln">9</span>cryptsetup close persistence
+</code></pre></div><h2 id="heading"></h2>
+<ol>
+<li>backup dick images</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>$ fdisk -l
+<span class="ln">2</span>$ blkid
+<span class="ln">3</span>$ dd <span class="nv">status</span><span class="o">=</span>progress <span class="nv">bs</span><span class="o">=</span><span class="m">512</span> <span class="k">if</span><span class="o">=</span>/dev/sda1 <span class="p">|</span> gzip -nc -6 &gt; backup.img.gz
+<span class="ln">4</span><span class="c1"># status</span>
+<span class="ln">5</span><span class="c1"># bs</span>
+<span class="ln">6</span><span class="c1"># if</span>
+</code></pre></div><h2 id="参考资料">参考资料</h2>
+<p><a href="https://www.kali.org/downloads/">https://www.kali.org/downloads/</a></p>
+<p><a href="https://www.kali.org/docs/usb/kali-linux-live-usb-install-linux/">https://www.kali.org/docs/usb/kali-linux-live-usb-install-linux/</a></p>
+<p><a href="https://www.kali.org/docs/usb/kali-linux-live-usb-persistence/">https://www.kali.org/docs/usb/kali-linux-live-usb-persistence/</a></p>
+<h2 id="后续">后续</h2>
+<p>TODO: 先把记得的先写下,用了一下Kali好像用了个一次性的内核,然后每次rsync到持久化分区保存文件,有空也可以再探究一下</p>
 
-
-    </li>
-  </ul>
+    
+      
+    
+  </article>
 <aside class="sidebar">
   <section class="sidebar_inner">
     <h2>c1f</h2>
@@ -171,10 +211,10 @@
         <a href="https://chongiofai.github.io/note/install-gentoo-and-archlinux/" class="nav-link">Install Gentoo And ArchLinux</a>
       </li>
       <li>
-        <a href="https://chongiofai.github.io/note/make-livecd/" class="nav-link">LiveCD</a>
+        <a href="https://chongiofai.github.io/note/android-flusing-device/" class="nav-link">Android Flashing Device</a>
       </li>
       <li>
-        <a href="https://chongiofai.github.io/note/android-flusing-device/" class="nav-link">Android Flashing Device</a>
+        <a href="https://chongiofai.github.io/note/v2ray-mitm/" class="nav-link">V2ray中间人尝试</a>
       </li>
     </ul>
     <div>
@@ -283,8 +323,6 @@
 </aside>
 
 </div>
-
-
     </main><svg width="0" height="0" class="hidden">
   <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
     <path d="M437 0H75C33.648 0 0 33.648 0 75v362c0 41.352 33.648 75 75 75h151V331h-60v-90h60v-61c0-49.629 40.371-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.352 0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zm0 0"></path>
