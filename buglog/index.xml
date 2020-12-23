@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Buglogs on ON THE WAY</title>
+    <title>Buglogs on ON_THE_WAY</title>
     <link>https://chongiofai.github.io/buglog/</link>
-    <description>Recent content in Buglogs on ON THE WAY</description>
+    <description>Recent content in Buglogs on ON_THE_WAY</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
     <lastBuildDate>Wed, 09 Dec 2020 13:06:13 +0800</lastBuildDate><atom:link href="https://chongiofai.github.io/buglog/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,7 @@
       <pubDate>Wed, 09 Dec 2020 13:06:13 +0800</pubDate>
       
       <guid>https://chongiofai.github.io/buglog/adb-device-no-permissions/</guid>
-      <description>[TOC]
-Question 1$ adb devices 2List of devices attached 300000000 no permissions (user in plugdev group; are your udev rules wrong?); see [http://developer.android.com/tools/device.html] Fixed 1$ sudo adb kill-server 2$ sudo pkill adb 3$ sudo adb start-server 4$ adb devices 5List of devices attached 600000000 unauthorized </description>
+      <description>Question 1$ adb devices 2List of devices attached 300000000 no permissions (user in plugdev group; are your udev rules wrong?); see [http://developer.android.com/tools/device.html] Fixed 1$ sudo adb kill-server 2$ sudo pkill adb 3$ sudo adb start-server 4$ adb devices 5List of devices attached 600000000 unauthorized </description>
     </item>
     
   </channel>

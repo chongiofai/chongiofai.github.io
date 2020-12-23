@@ -1,46 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>C1F</title>
+    <title>ON_THE_WAY</title>
     <link>https://chongiofai.github.io/cn/</link>
-    <description>Recent content on C1F</description>
+    <description>Recent content on ON_THE_WAY</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright><atom:link href="https://chongiofai.github.io/cn/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>关于</title>
-      <link>https://chongiofai.github.io/cn/about/</link>
-      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://chongiofai.github.io/cn/about/</guid>
-      <description>TODO: About ME... </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://chongiofai.github.io/cn/buglog/</link>
-      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://chongiofai.github.io/cn/buglog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://chongiofai.github.io/cn/note/</link>
-      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://chongiofai.github.io/cn/note/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://chongiofai.github.io/cn/other/</link>
-      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://chongiofai.github.io/cn/other/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>

@@ -3,62 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://chongiofai.github.io/cn/about/</loc>
-    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+    <loc>https://chongiofai.github.io/cn/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://chongiofai.github.io/about/"
+                href="https://chongiofai.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://chongiofai.github.io/cn/about/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://chongiofai.github.io/cn/buglog/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://chongiofai.github.io/buglog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://chongiofai.github.io/cn/buglog/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://chongiofai.github.io/cn/note/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://chongiofai.github.io/note/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://chongiofai.github.io/cn/note/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://chongiofai.github.io/cn/other/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://chongiofai.github.io/other/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://chongiofai.github.io/cn/other/"
+                href="https://chongiofai.github.io/cn/categories/"
                 />
   </url>
   
@@ -73,20 +27,6 @@
                 rel="alternate"
                 hreflang="cn"
                 href="https://chongiofai.github.io/cn/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://chongiofai.github.io/cn/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://chongiofai.github.io/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://chongiofai.github.io/cn/categories/"
                 />
   </url>
   

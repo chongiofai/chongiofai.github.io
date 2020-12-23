@@ -75,16 +75,6 @@
   <url>
     <loc>https://chongiofai.github.io/about/</loc>
     <lastmod>2020-12-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://chongiofai.github.io/cn/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://chongiofai.github.io/about/"
-                />
   </url>
   
   <url>
@@ -215,46 +205,16 @@
   <url>
     <loc>https://chongiofai.github.io/buglog/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://chongiofai.github.io/cn/buglog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://chongiofai.github.io/buglog/"
-                />
   </url>
   
   <url>
     <loc>https://chongiofai.github.io/note/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://chongiofai.github.io/cn/note/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://chongiofai.github.io/note/"
-                />
   </url>
   
   <url>
     <loc>https://chongiofai.github.io/other/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://chongiofai.github.io/cn/other/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://chongiofai.github.io/other/"
-                />
   </url>
   
 </urlset>
