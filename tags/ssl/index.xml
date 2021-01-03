@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ssl on ON THE WAY</title>
+    <link>https://chongiofai.github.io/tags/ssl/</link>
+    <description>Recent content in ssl on ON THE WAY</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 28 Dec 2020 16:10:20 +0800</lastBuildDate><atom:link href="https://chongiofai.github.io/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ssl Disable Connect</title>
+      <link>https://chongiofai.github.io/buglog/ssl-disable-connect/</link>
+      <pubDate>Mon, 28 Dec 2020 16:10:20 +0800</pubDate>
+      
+      <guid>https://chongiofai.github.io/buglog/ssl-disable-connect/</guid>
+      <description>Insert Lead paragraph here.
+Question 1$ curl https://... 2curl: (35) error:1425F102:SSL routines:ssl_choose_client_version:unsupported protocol 3$ python with_ssl_session.py 4[DEBUG] SSL connection error occurred (&amp;#39;[SSL: WRONG_SSL_VERSION] wrong ssl version (_ssl.c:727)&amp;#39;) 5[DEBUG] SSL connection error occurred (&amp;#39;[Errno 0] Error&amp;#39;) 6[WARNING] can&amp;#39;t establish SSL connection Reason Fixed 1$ vim /etc/ssl/openssl.cnf disable protocol minimum version constraints
+1[system_default_sect] 2# MinProtocol = TLSv1.2 </description>
+    </item>
+    
+  </channel>
+</rss>

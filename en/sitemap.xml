@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://chongiofai.github.io/</loc>
-    <lastmod>2020-12-15T14:57:21+08:00</lastmod>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
@@ -19,7 +19,7 @@
   
   <url>
     <loc>https://chongiofai.github.io/categories/</loc>
-    <lastmod>2020-12-15T14:57:21+08:00</lastmod>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
@@ -30,6 +30,71 @@
                 hreflang="en"
                 href="https://chongiofai.github.io/categories/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://chongiofai.github.io/tags/disk/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chongiofai.github.io/tags/hardware/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chongiofai.github.io/categories/note/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chongiofai.github.io/note/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chongiofai.github.io/tags/partition/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chongiofai.github.io/note/partition-disk/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chongiofai.github.io/tags/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://chongiofai.github.io/cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://chongiofai.github.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://chongiofai.github.io/categories/bug/</loc>
+    <lastmod>2020-12-28T16:10:20+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chongiofai.github.io/buglog/</loc>
+    <lastmod>2020-12-28T16:10:20+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chongiofai.github.io/tags/ssl/</loc>
+    <lastmod>2020-12-28T16:10:20+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chongiofai.github.io/buglog/ssl-disable-connect/</loc>
+    <lastmod>2020-12-28T16:10:20+08:00</lastmod>
   </url>
   
   <url>
@@ -48,31 +113,6 @@
   </url>
   
   <url>
-    <loc>https://chongiofai.github.io/categories/note/</loc>
-    <lastmod>2020-12-15T14:57:21+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://chongiofai.github.io/note/</loc>
-    <lastmod>2020-12-15T14:57:21+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://chongiofai.github.io/tags/</loc>
-    <lastmod>2020-12-15T14:57:21+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://chongiofai.github.io/cn/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://chongiofai.github.io/tags/"
-                />
-  </url>
-  
-  <url>
     <loc>https://chongiofai.github.io/about/</loc>
     <lastmod>2020-12-11T00:00:00+00:00</lastmod>
   </url>
@@ -84,16 +124,6 @@
   
   <url>
     <loc>https://chongiofai.github.io/tags/android/</loc>
-    <lastmod>2020-12-09T13:06:13+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://chongiofai.github.io/categories/bug/</loc>
-    <lastmod>2020-12-09T13:06:13+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://chongiofai.github.io/buglog/</loc>
     <lastmod>2020-12-09T13:06:13+08:00</lastmod>
   </url>
   
@@ -168,17 +198,17 @@
   </url>
   
   <url>
-    <loc>https://chongiofai.github.io/note/v2ray-mitm/</loc>
+    <loc>https://chongiofai.github.io/note/mitm-attack-via-v2ray/</loc>
     <lastmod>2020-03-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://chongiofai.github.io/tags/grub/</loc>
+    <loc>https://chongiofai.github.io/note/grub/</loc>
     <lastmod>2020-01-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://chongiofai.github.io/note/grub/</loc>
+    <loc>https://chongiofai.github.io/tags/grub/</loc>
     <lastmod>2020-01-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -188,7 +218,7 @@
   </url>
   
   <url>
-    <loc>https://chongiofai.github.io/note/ngrok/</loc>
+    <loc>https://chongiofai.github.io/note/ngrok-customized/</loc>
     <lastmod>2019-11-07T00:00:00+00:00</lastmod>
   </url>
   

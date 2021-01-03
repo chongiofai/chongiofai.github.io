@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" data-figures="" class="page">
   <head>
-<title>Install Gentoo And ArchLinux | ON THE WAY</title>
+<title>Install Gentoo/Archlinux | ON THE WAY</title>
 <meta charset="utf-8">
 <meta name="generator" content="Hugo 0.79.0" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -10,13 +10,15 @@
 <meta property="og:locale" content="en" />
 
 <meta property="og:type" content="article">
-<meta name="description" content="其他相关笔记  Make LiveCD Disk Partitional Boot Device Linux Graphics   看了一些文档和资料,纪录一下对于Linux或者OS上的理解,原本了解到Gentoo这个发行版,然后再看到Archlinux,在上周末装了Archlinux(NetworkManager卡了 …">
+<meta name="description" content="这理又重装了Gentoo,Archlinux是之前安装的,只在记忆中简单对比一下大概的
+  约定名词 安装环境: 安装Gentoo/Archlinux的操作环境,非安装后的新系统环境,通常为LiveCD的Live环境中 目标环境: 安装Gentoo/Archlinux的新系统环境,为安装后结果,此文以/mnt为挂载目 …">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="">
-<meta name="twitter:title" content="Install Gentoo And ArchLinux" />
+<meta name="twitter:title" content="Install Gentoo/Archlinux" />
 <meta property="og:url" content="https://chongiofai.github.io/note/install-gentoo-and-archlinux/" />
-<meta property="og:title" content="Install Gentoo And ArchLinux" />
-<meta property="og:description" content="其他相关笔记  Make LiveCD Disk Partitional Boot Device Linux Graphics   看了一些文档和资料,纪录一下对于Linux或者OS上的理解,原本了解到Gentoo这个发行版,然后再看到Archlinux,在上周末装了Archlinux(NetworkManager卡了 …" />
+<meta property="og:title" content="Install Gentoo/Archlinux" />
+<meta property="og:description" content="这理又重装了Gentoo,Archlinux是之前安装的,只在记忆中简单对比一下大概的
+  约定名词 安装环境: 安装Gentoo/Archlinux的操作环境,非安装后的新系统环境,通常为LiveCD的Live环境中 目标环境: 安装Gentoo/Archlinux的新系统环境,为安装后结果,此文以/mnt为挂载目 …" />
 <meta property="og:image" content="https://chongiofai.github.io/images/thumbnail.png" />
 <link rel="apple-touch-icon" sizes="180x180" href='https://chongiofai.github.io/icons/apple-touch-icon.png'>
 <link rel="icon" type="image/png" sizes="32x32" href='https://chongiofai.github.io/icons/favicon-32x32.png'>
@@ -120,7 +122,7 @@
   
 <div class="grid-inverse wrap content">
   <article class="post_content">
-    <h1 class="post_title">Install Gentoo And ArchLinux</h1><div class="post_meta">
+    <h1 class="post_title">Install Gentoo/Archlinux</h1><div class="post_meta">
   <svg class="icon">
   <use xlink:href="#calendar"></use>
 </svg>
@@ -139,12 +141,12 @@
     
 <div class="post_share">
   Share on:
-  <a href="https://twitter.com/intent/tweet?text=Install%20Gentoo%20And%20ArchLinux&url=https%3a%2f%2fchongiofai.github.io%2fnote%2finstall-gentoo-and-archlinux%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
+  <a href="https://twitter.com/intent/tweet?text=Install%20Gentoo%2fArchlinux&url=https%3a%2f%2fchongiofai.github.io%2fnote%2finstall-gentoo-and-archlinux%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
     <svg class="icon">
   <use xlink:href="#twitter"></use>
 </svg>
   </a>
-  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fchongiofai.github.io%2fnote%2finstall-gentoo-and-archlinux%2f&t=Install%20Gentoo%20And%20ArchLinux" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
+  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fchongiofai.github.io%2fnote%2finstall-gentoo-and-archlinux%2f&t=Install%20Gentoo%2fArchlinux" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
     <svg class="icon">
   <use xlink:href="#facebook"></use>
 </svg>
@@ -166,42 +168,256 @@
     <h2>Overview</h2>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#其他相关笔记">其他相关笔记</a></li>
-    <li><a href="#install-gentoo--archlinux">Install Gentoo / Archlinux</a></li>
+    <li><a href="#一点小理解">一点小理解</a></li>
+    <li><a href="#玩起来">玩起来</a>
+      <ul>
+        <li><a href="#安装介质">安装介质</a></li>
+        <li><a href="#配置安装环境">配置安装环境</a></li>
+        <li><a href="#磁盘分区">磁盘分区</a></li>
+        <li><a href="#安装工具链">安装工具链</a></li>
+        <li><a href="#安装内核">安装内核</a></li>
+        <li><a href="#安装驱动">安装驱动</a></li>
+        <li><a href="#安装引导">安装引导</a></li>
+        <li><a href="#个人化">个人化</a></li>
+        <li><a href="#其他">其他</a></li>
+      </ul>
+    </li>
     <li><a href="#参考资料">参考资料</a></li>
     <li><a href="#后续">后续</a></li>
   </ul>
 </nav>
-    <h2 id="其他相关笔记">其他相关笔记</h2>
+    <blockquote>
+<p>这理又重装了Gentoo,Archlinux是之前安装的,只在记忆中简单对比一下大概的</p>
+</blockquote>
+<blockquote>
+<p><em>约定名词</em>
+安装环境: 安装Gentoo/Archlinux的操作环境,非安装后的新系统环境,通常为LiveCD的Live环境中
+目标环境: 安装Gentoo/Archlinux的新系统环境,为安装后结果,此文以<code>/mnt</code>为挂载目标(与Archlinux一致,Gentoo官方文档是以<code>/mnt/gentoo</code>为例)</p>
+</blockquote>
+<h2 id="一点小理解">一点小理解</h2>
+<blockquote>
+<p><a href="https://www.gentoo.org/">https://www.gentoo.org/</a>
+<a href="https://www.archlinux.org/">https://www.archlinux.org/</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Gentoo</th>
+<th>Archlinux</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一句话</td>
+<td>配置自由度极高(也有人说OverEninerring)</td>
+<td>KISS(Keep it Simple, Stupid)</td>
+</tr>
+<tr>
+<td>硬件支持</td>
+<td>反正内核自已编译程序自已编译...</td>
+<td>官方支持x86</td>
+</tr>
+<tr>
+<td>INIT</td>
+<td>OpenRC(default)/Systemd</td>
+<td>Systemd</td>
+</tr>
+<tr>
+<td>包管理</td>
+<td>portage(源码编译,提供<code>USE</code>,<code>SLOT</code>等超赞功能)</td>
+<td>pacman(二进制分发)</td>
+</tr>
+<tr>
+<td>安装环境</td>
+<td>基本完全不依赖LiveCD,可在任何安装环境下使用stage包开始构建新系统</td>
+<td>依赖LiveCD一些工具</td>
+</tr>
+</tbody>
+</table>
+<h2 id="玩起来">玩起来</h2>
 <ol>
-<li><a href="https://blog.chongiofai.com/note/make-livecd">Make LiveCD</a></li>
-<li><a href="https://blog.chongiofai.com/note/disk-partitional">Disk Partitional</a></li>
-<li><a href="https://blog.chongiofai.com/note/boot-device">Boot Device</a></li>
-<li><a href="https://blog.chongiofai.com/note/linux-graphics">Linux Graphics</a></li>
-</ol>
+<li>
+<p>Gentoo</p>
 <blockquote>
-<p>看了一些文档和资料,纪录一下对于Linux或者OS上的理解,原本了解到Gentoo这个发行版,然后再看到Archlinux,在上周末装了Archlinux(NetworkManager卡了在Dbus Error...),今周再试了一下Gentoo(还没装完...),先纪录一下未完待续吧...</p>
+<p><a href="https://wiki.gentoo.org/wiki/Installation">https://wiki.gentoo.org/wiki/Installation</a>
+<a href="https://wiki.gentoo.org/wiki/Handbook:Main_Page">https://wiki.gentoo.org/wiki/Handbook:Main_Page</a></p>
 </blockquote>
-<ol>
-<li>Gentoo VS Archlinux</li>
-</ol>
+</li>
+<li>
+<p>Archlinux</p>
 <blockquote>
-<p><a href="https://www.gentoo.org/">https://www.gentoo.org/</a></p>
-<p><a href="https://www.archlinux.org/">https://www.archlinux.org/</a></p>
-</blockquote>
-<p>这两个发行版(Gentoo,Archlinux)对比其他发行版(Ubuntu,Kali,Centos,Debian...),会有更多的可塑性,最直接的了解是在这些其他发行版在插入LiveCD/InstallISO时,会引导进行一系列如分区,用户,地域,时间等配置,在这两发行版都会回归到Linux原本的文件配置自行修改,还有如Gentoo可以自已编译内核,对硬件的兼容</p>
-<p>Archlinux使用<code>pacman</code>作为包管理器,有提供二进制的包可以直接使用,奉行KISS (Keep It Simple, Stupid.),Archlinux社区对Gentoo的评价为过度engineering</p>
-<p>Gentoo使用<code>portage</code>作为包管理器,提供源码编译使用,有<code>USE</code>这个参数可以对编译进行配置</p>
-<blockquote>
-<p>在听到每个都要编译时就不想装了,想起自已编译一个个软件的看<code>./configure</code>再<code>make</code>...我自已之前在Ubuntu编的<code>vim</code>跟著我换了好多好多次系统..懒再看一次<code>./configure</code>,然后发现了这个<code>USE</code>感觉简直真是恩物,太赞了...抽象了各个包间的参数,无以言表,入坑试撸Gentoo=D,更多的对比未完待续(?)</p>
-</blockquote>
-<h2 id="install-gentoo--archlinux">Install Gentoo / Archlinux</h2>
-<blockquote>
-<p><a href="https://wiki.gentoo.org/wiki/Installation">https://wiki.gentoo.org/wiki/Installation</a></p>
 <p><a href="https://wiki.archlinux.org/index.php/installation_guide">https://wiki.archlinux.org/index.php/installation_guide</a></p>
 </blockquote>
-<p>其实官方文档很详细,好像没必要再写这个,纪录一下碰到的坑和理解,因为之前安装都是在相应LiveCD下,所以先未完待</p>
+</li>
+</ol>
+<h3 id="安装介质">安装介质</h3>
+<p><a href="https://blog.chongiofai.com/note/make-livecd">制作LiveUSB</a></p>
+<blockquote>
+<p>TODO:</p>
+</blockquote>
 <ol>
+<li>
+<p>Gentoo</p>
+<blockquote>
+<p><a href="https://www.gentoo.org/downloads/">https://www.gentoo.org/downloads/</a></p>
+</blockquote>
+</li>
+<li>
+<p>Archlinux</p>
+<blockquote>
+<p><a href="https://archlinux.org/download/">https://archlinux.org/download/</a></p>
+</blockquote>
+</li>
+</ol>
+<h3 id="配置安装环境">配置安装环境</h3>
+<ol>
+<li>
+<p>Network</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>$ ip address
+</code></pre></div></li>
+<li>
+<p>Date</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>$ date
+<span class="ln">2</span>$ ntpdate -u cn.pool.ntp.org
+</code></pre></div></li>
+<li>
+<p>Keymap</p>
+</li>
+</ol>
+<h3 id="磁盘分区">磁盘分区</h3>
+<p><a href="https://blog.chongiofai.com/note/partition-disk">Disk Partitional</a></p>
+<ol>
+<li>
+<p>准备安装磁盘</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span><span class="c1"># 查看当前磁盘挂载情况,确定使用哪块磁盘</span>
+<span class="ln">2</span>$ sudo lsblk
+<span class="ln">3</span>$ sudo blkid
+<span class="ln">4</span><span class="c1"># 磁盘分区,以`/dev/sda`为例,简单区分`/`,`/home`,`/boot`,`/boot/efi`,此处使用UEFI方式躯动</span>
+<span class="ln">5</span>$ gdisk /dev/sda
+</code></pre></div></li>
+<li>
+<p>磁盘格式化/加密/逻辑分区</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span><span class="c1"># 此处只作普通分区</span>
+<span class="ln">2</span>$ mkfs.ext4 -L GENTOO /dev/sda1
+<span class="ln">3</span>$ mkfs.vfat -L  /dev/sda2
+<span class="ln">4</span>$ mkswap -L SWAP /dev/sda3
+<span class="ln">5</span>$ mkfs.ext4 -L GENTOO /dev/sda4
+<span class="ln">6</span>$ mkfs.ext4 -L GENTOO /dev/sda5
+</code></pre></div></li>
+<li>
+<p>挂载磁盘</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln"> 1</span>$ mount /dev/sda4 /
+<span class="ln"> 2</span>$ mkdir -p /mnt/boot/efi
+<span class="ln"> 3</span>$ mkdir -p /mnt/home
+<span class="ln"> 4</span>$ mount /dev/sda1 /mnt/boot
+<span class="ln"> 5</span>$ mount /dev/sda2 /mnt/boot/efi
+<span class="ln"> 6</span>$ mount /dev/sda5 /mnt/home
+<span class="ln"> 7</span>$ swapon /dev/sda3
+<span class="ln"> 8</span><span class="c1"># 下方在Archlinux中可以使用LiveCD工具`arch-chroot /mnt`时自动完成,Gentoo需自行手动操作</span>
+<span class="ln"> 9</span>$ mount --types proc /proc /mnt/proc
+<span class="ln">10</span>$ mount --rbind /sys /mnt/sys
+<span class="ln">11</span>$ mount --make-rslave /mnt/sys  <span class="c1"># 使用Systemd时必须</span>
+<span class="ln">12</span>$ mount --rbind /dev /mnt/dev
+<span class="ln">13</span>$ mount --make-rslave /mnt/dev  <span class="c1"># 使用Systemd时必须</span>
+</code></pre></div></li>
+</ol>
+<h3 id="安装工具链">安装工具链</h3>
+<ol>
+<li>
+<p>Gentoo</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>$ tar xvf stage3-amd64-20201230T214503Z.tar.xz -C /mnt
+<span class="ln">2</span><span class="c1"># 选择校验下载源</span>
+<span class="ln">3</span>$ mirrorselect -i -o &gt;&gt; /mnt/etc/portage/make.conf
+<span class="ln">4</span><span class="c1"># 复制</span>
+</code></pre></div><blockquote>
+<p>进入环境后</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln"> 1</span><span class="c1"># 配置下载源</span>
+<span class="ln"> 2</span>$ mkdir -p /etc/portage/repors.conf
+<span class="ln"> 3</span>$ cp /usr/share/portage/config/repos.conf /etc/portage/repors.conf/gentoo.conf
+<span class="ln"> 4</span>$ cat /etc/portage/repors.conf/gentoo.conf
+<span class="ln"> 5</span><span class="c1"># 时间同步,Gentoo安装拉取会使用到`rsync`等依赖系统时间</span>
+<span class="ln"> 6</span>$ ntpdate -u cn.pool.ntp.org
+<span class="ln"> 7</span><span class="c1"># 下载文件校验码</span>
+<span class="ln"> 8</span>$ emerge-webrsync
+<span class="ln"> 9</span><span class="c1"># 下载文件目录</span>
+<span class="ln">10</span>$ emerge --sync
+<span class="ln">11</span><span class="c1"># 确定portage配置</span>
+<span class="ln">12</span>$ cat /etc/portage/make.conf
+<span class="ln">13</span><span class="c1"># 选择配置文件</span>
+<span class="ln">14</span>$ eselect profile list
+<span class="ln">15</span>$ eselect profile <span class="nb">set</span> <span class="m">1</span>
+<span class="ln">16</span>$ eselect profile list
+</code></pre></div></li>
+<li>
+<p>Archlinux</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>$ pacstrap /mnt base
+</code></pre></div></li>
+</ol>
+<h3 id="安装内核">安装内核</h3>
+<ol>
+<li>
+<p>Gentoo</p>
+<blockquote>
+<p><a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Kernel">https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Kernel</a></p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln"> 1</span>$ emerge --ask --verbose sys-apps/pciutils app-admin/mcelog
+<span class="ln"> 2</span>$ emerge --ask --verbose sys-kernel/gentoo-sources
+<span class="ln"> 3</span>$ <span class="nb">cd</span> /usr/src/linux
+<span class="ln"> 4</span>$ make menuconfig
+<span class="ln"> 5</span>$ cat /usr/src/linux/.config
+<span class="ln"> 6</span>$ make
+<span class="ln"> 7</span>$ make modules_install
+<span class="ln"> 8</span>$ make install
+<span class="ln"> 9</span>$ ls /boot/vmlinuz-*-gentoo-*  /boot/config-*-gentoo-* /boot/System.map-*-gentoo-*
+<span class="ln">10</span>$ genkenerl
+<span class="ln">11</span>$ ls /boot/initramfs-*-gentoo-*
+</code></pre></div></li>
+<li>
+<p>Archlinux</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>$ pacstrap /mnt linux
+</code></pre></div></li>
+</ol>
+<h3 id="安装驱动">安装驱动</h3>
+<ol>
+<li>
+<p>Gentoo</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>$ emerge --ask --verbose sys-kernel/linux-firmware
+</code></pre></div></li>
+<li>
+<p>Archlinux</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>$ pacstrap /mnt linux-firmware
+</code></pre></div></li>
+</ol>
+<h3 id="安装引导">安装引导</h3>
+<p><a href="https://blog.chongiofai.com/note/boot-device">Boot Device</a></p>
+<ol>
+<li>
+<p>Gentoo</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>$ emerge --ask --verbose sys-boot/grub:2
+</code></pre></div></li>
+<li>
+<p>Archlinux</p>
+</li>
+</ol>
+<h3 id="个人化">个人化</h3>
+<ol>
+<li>locale,keymap</li>
+<li>hostname, domain</li>
+<li>hosts</li>
+<li>passwd,useradd</li>
+</ol>
+<h3 id="其他">其他</h3>
+<h4 id="图形化">图形化</h4>
+<p><a href="https://blog.chongiofai.com/note/linux-graphics">Linux Graphics</a></p>
+<ol>
+<li>
+<p>Gentoo</p>
+</li>
+<li>
+<p>Archlinux</p>
+</li>
 <li>
 <p>安装发行版工具链,如init(Archlinux的<code>Systemd</code>和Gentoo可选的<code>Systemd</code>及<code>OpenRC</code>)、包管理工具(Archlinux的<code>pacman</code>和Gentoo的<code>portage</code>)等等</p>
 <ul>
@@ -219,24 +435,10 @@
 </ul>
 </li>
 <li>
+<p>工具链配置</p>
+</li>
+<li>
 <p>安装Linux的内核</p>
-<ul>
-<li>
-<p>Archlinux</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>pacstrap /mnt linux
-</code></pre></div></li>
-<li>
-<p>Gentoo</p>
-<blockquote>
-<p>这里的Gentoo需要配置和编译,也有<code>genkernel</code>工具可以跳过配置
-<a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Kernel">https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Kernel</a></p>
-</blockquote>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>emerge --ask sys-kernel/gentoo-sources
-<span class="ln">2</span>make menuconfig
-<span class="ln">3</span>make <span class="o">&amp;&amp;</span> make modules_install
-<span class="ln">4</span>make install
-</code></pre></div></li>
-</ul>
 </li>
 <li>
 <p>安装基本驱动集合</p>
@@ -274,9 +476,6 @@
 <p><a href="http://wiki.archlinux.org/">http://wiki.archlinux.org/</a></p>
 <p><a href="https://www.thegeekstuff.com/2011/02/linux-boot-process/">https://www.thegeekstuff.com/2011/02/linux-boot-process/</a></p>
 <h2 id="后续">后续</h2>
-<p>TODO: 完成安装Gentoo</p>
-<p>TODO: DBus</p>
-<p>都先草稿弄出来吧..</p>
 
     
       
@@ -292,6 +491,12 @@
     <h2 class="mt-4">Recent Posts</h2>
     <ul class="flex-column">
       <li>
+        <a href="https://chongiofai.github.io/note/partition-disk/" class="nav-link">Partition Disk</a>
+      </li>
+      <li>
+        <a href="https://chongiofai.github.io/buglog/ssl-disable-connect/" class="nav-link">Ssl Disable Connect</a>
+      </li>
+      <li>
         <a href="https://chongiofai.github.io/note/git-conventions/" class="nav-link">Git Conventions</a>
       </li>
       <li>
@@ -300,24 +505,18 @@
       <li>
         <a href="https://chongiofai.github.io/note/make-livecd/" class="nav-link">LiveCD</a>
       </li>
-      <li>
-        <a href="https://chongiofai.github.io/note/android-flusing-device/" class="nav-link">Android Flashing Device</a>
-      </li>
-      <li>
-        <a href="https://chongiofai.github.io/note/v2ray-mitm/" class="nav-link">V2ray中间人尝试</a>
-      </li>
     </ul>
     <div>
       <h2 class="mt-4 taxonomy" id="categories-section">Categories</h2>
       <nav class="tags_nav">
         <a href='https://chongiofai.github.io/categories/note/' class="post_tag button button_translucent">
           NOTE
-          <span class="button_tally">7</span>
+          <span class="button_tally">8</span>
         </a>
         
         <a href='https://chongiofai.github.io/categories/bug/' class="post_tag button button_translucent">
           BUG
-          <span class="button_tally">1</span>
+          <span class="button_tally">2</span>
         </a>
         
         
@@ -351,6 +550,11 @@
           <span class="button_tally">1</span>
         </a>
         
+        <a href='https://chongiofai.github.io/tags/disk/' class="post_tag button button_translucent">
+          DISK
+          <span class="button_tally">1</span>
+        </a>
+        
         <a href='https://chongiofai.github.io/tags/fastboot/' class="post_tag button button_translucent">
           FASTBOOT
           <span class="button_tally">1</span>
@@ -373,6 +577,11 @@
         
         <a href='https://chongiofai.github.io/tags/hacker/' class="post_tag button button_translucent">
           HACKER
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://chongiofai.github.io/tags/hardware/' class="post_tag button button_translucent">
+          HARDWARE
           <span class="button_tally">1</span>
         </a>
         
@@ -401,8 +610,18 @@
           <span class="button_tally">1</span>
         </a>
         
+        <a href='https://chongiofai.github.io/tags/partition/' class="post_tag button button_translucent">
+          PARTITION
+          <span class="button_tally">1</span>
+        </a>
+        
         <a href='https://chongiofai.github.io/tags/root/' class="post_tag button button_translucent">
           ROOT
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://chongiofai.github.io/tags/ssl/' class="post_tag button button_translucent">
+          SSL
           <span class="button_tally">1</span>
         </a>
         
@@ -466,7 +685,7 @@
 <footer class="footer">
   <div class="footer_inner wrap pale">
     <img src='https://chongiofai.github.io/icons/apple-touch-icon.png' class="icon icon_2 transparent">
-    <p>Copyright &copy;&nbsp;2019&nbsp;-&nbsp;<span class="year">2020</span>&nbsp;ON THE WAY. All Rights Reserved</p><a class="to_top" href="#documentTop">
+    <p>Copyright &copy;&nbsp;2019&nbsp;-&nbsp;<span class="year">2021</span>&nbsp;ON THE WAY. All Rights Reserved</p><a class="to_top" href="#documentTop">
   <svg class="icon">
   <use xlink:href="#arrow"></use>
 </svg>

@@ -6,7 +6,18 @@
     <description>Recent content in bug on ON THE WAY</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 09 Dec 2020 13:06:13 +0800</lastBuildDate><atom:link href="https://chongiofai.github.io/categories/bug/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Dec 2020 16:10:20 +0800</lastBuildDate><atom:link href="https://chongiofai.github.io/categories/bug/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ssl Disable Connect</title>
+      <link>https://chongiofai.github.io/buglog/ssl-disable-connect/</link>
+      <pubDate>Mon, 28 Dec 2020 16:10:20 +0800</pubDate>
+      
+      <guid>https://chongiofai.github.io/buglog/ssl-disable-connect/</guid>
+      <description>Insert Lead paragraph here.
+Question 1$ curl https://... 2curl: (35) error:1425F102:SSL routines:ssl_choose_client_version:unsupported protocol 3$ python with_ssl_session.py 4[DEBUG] SSL connection error occurred (&amp;#39;[SSL: WRONG_SSL_VERSION] wrong ssl version (_ssl.c:727)&amp;#39;) 5[DEBUG] SSL connection error occurred (&amp;#39;[Errno 0] Error&amp;#39;) 6[WARNING] can&amp;#39;t establish SSL connection Reason Fixed 1$ vim /etc/ssl/openssl.cnf disable protocol minimum version constraints
+1[system_default_sect] 2# MinProtocol = TLSv1.2 </description>
+    </item>
+    
     <item>
       <title>Adb Device No Permissions</title>
       <link>https://chongiofai.github.io/buglog/adb-device-no-permissions/</link>

@@ -8,11 +8,11 @@
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
     <lastBuildDate>Sat, 28 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://chongiofai.github.io/tags/hacker/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>V2ray中间人尝试</title>
-      <link>https://chongiofai.github.io/note/v2ray-mitm/</link>
+      <title>MITM Attack Via V2ray</title>
+      <link>https://chongiofai.github.io/note/mitm-attack-via-v2ray/</link>
       <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://chongiofai.github.io/note/v2ray-mitm/</guid>
+      <guid>https://chongiofai.github.io/note/mitm-attack-via-v2ray/</guid>
       <description>前两天有新闻JD和GITHUB被劫持，和最近生活中有些情况令我想到关于劫持页面重导向试试实现(其实想指定情况下在我手机上劫持微信跳转页面到我自己的页面下
  环境  V2Ray 4.22.1 (V2Fly, a community-driven edition of V2Ray.) Custom (go1.13.8 linux/amd64)  实现  v2配置 设置outbounds规则，设置劫持转发的目标点，在routing设置转发   https://www.v2fly.org/chapter_02/protocols/freedom.html
  1 &amp;#34;outbounds&amp;#34;: [ 2 { 3 &amp;#34;protocol&amp;#34;: &amp;#34;freedom&amp;#34;, 4 &amp;#34;settings&amp;#34;: { 5 &amp;#34;redirect&amp;#34;: &amp;#34;127.0.0.1:58885&amp;#34; 6 }, 7 &amp;#34;tag&amp;#34;: &amp;#34;mitm&amp;#34; 8 } 9 ],  https://www.v2fly.org/chapter_02/03_routing.html

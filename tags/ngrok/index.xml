@@ -8,11 +8,11 @@
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
     <lastBuildDate>Thu, 07 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://chongiofai.github.io/tags/ngrok/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Ngrok修改笔记</title>
-      <link>https://chongiofai.github.io/note/ngrok/</link>
+      <title>Ngrok Customized</title>
+      <link>https://chongiofai.github.io/note/ngrok-customized/</link>
       <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://chongiofai.github.io/note/ngrok/</guid>
+      <guid>https://chongiofai.github.io/note/ngrok-customized/</guid>
       <description>client  Run-SetupModel-newClientModel建立ngrokd-ngroko信道   好像無加密
  ctl-clientModel.Run-control開始使用model向ngrokd建立連接   newClientModel??為什么給configPath不是config,因為服务器給出新authToken更新
  clientModel.update更新control   tunnel下分拆可能會引到重復NewTunnel Proxy Agent SaveAuthToken保存完Token不更新內存中的conifg???

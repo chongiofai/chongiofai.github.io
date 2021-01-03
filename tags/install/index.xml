@@ -8,27 +8,19 @@
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
     <lastBuildDate>Sun, 06 Dec 2020 09:13:12 +0800</lastBuildDate><atom:link href="https://chongiofai.github.io/tags/install/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Install Gentoo And ArchLinux</title>
+      <title>Install Gentoo/Archlinux</title>
       <link>https://chongiofai.github.io/note/install-gentoo-and-archlinux/</link>
       <pubDate>Sun, 06 Dec 2020 09:13:12 +0800</pubDate>
       
       <guid>https://chongiofai.github.io/note/install-gentoo-and-archlinux/</guid>
-      <description>其他相关笔记  Make LiveCD Disk Partitional Boot Device Linux Graphics   看了一些文档和资料,纪录一下对于Linux或者OS上的理解,原本了解到Gentoo这个发行版,然后再看到Archlinux,在上周末装了Archlinux(NetworkManager卡了在Dbus Error...),今周再试了一下Gentoo(还没装完...),先纪录一下未完待续吧...
-  Gentoo VS Archlinux   https://www.gentoo.org/
-https://www.archlinux.org/
- 这两个发行版(Gentoo,Archlinux)对比其他发行版(Ubuntu,Kali,Centos,Debian...),会有更多的可塑性,最直接的了解是在这些其他发行版在插入LiveCD/InstallISO时,会引导进行一系列如分区,用户,地域,时间等配置,在这两发行版都会回归到Linux原本的文件配置自行修改,还有如Gentoo可以自已编译内核,对硬件的兼容
-Archlinux使用pacman作为包管理器,有提供二进制的包可以直接使用,奉行KISS (Keep It Simple, Stupid.),Archlinux社区对Gentoo的评价为过度engineering
-Gentoo使用portage作为包管理器,提供源码编译使用,有USE这个参数可以对编译进行配置
- 在听到每个都要编译时就不想装了,想起自已编译一个个软件的看./configure再make...我自已之前在Ubuntu编的vim跟著我换了好多好多次系统..懒再看一次./configure,然后发现了这个USE感觉简直真是恩物,太赞了...抽象了各个包间的参数,无以言表,入坑试撸Gentoo=D,更多的对比未完待续(?)
- Install Gentoo / Archlinux  https://wiki.gentoo.org/wiki/Installation
-https://wiki.archlinux.org/index.php/installation_guide
- 其实官方文档很详细,好像没必要再写这个,纪录一下碰到的坑和理解,因为之前安装都是在相应LiveCD下,所以先未完待
-  安装发行版工具链,如init(Archlinux的Systemd和Gentoo可选的Systemd及OpenRC)、包管理工具(Archlinux的pacman和Gentoo的portage)等等
-  Archlinux
-1pacstrap /mnt base   Gentoo
- https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Stage
- 1tar xf stage3-amd64-20201202T214503Z.tar.xz # 这里使用OpenRC版本init     安装Linux的内核
-  Archlinux</description>
+      <description>这理又重装了Gentoo,Archlinux是之前安装的,只在记忆中简单对比一下大概的
+  约定名词 安装环境: 安装Gentoo/Archlinux的操作环境,非安装后的新系统环境,通常为LiveCD的Live环境中 目标环境: 安装Gentoo/Archlinux的新系统环境,为安装后结果,此文以/mnt为挂载目标(与Archlinux一致,Gentoo官方文档是以/mnt/gentoo为例)
+ 一点小理解  https://www.gentoo.org/ https://www.archlinux.org/
+     Gentoo Archlinux     一句话 配置自由度极高(也有人说OverEninerring) KISS(Keep it Simple, Stupid)   硬件支持 反正内核自已编译程序自已编译... 官方支持x86   INIT OpenRC(default)/Systemd Systemd   包管理 portage(源码编译,提供USE,SLOT等超赞功能) pacman(二进制分发)   安装环境 基本完全不依赖LiveCD,可在任何安装环境下使用stage包开始构建新系统 依赖LiveCD一些工具    玩起来   Gentoo
+ https://wiki.gentoo.org/wiki/Installation https://wiki.gentoo.org/wiki/Handbook:Main_Page
+   Archlinux
+ https://wiki.archlinux.org/index.php/installation_guide
+   安装介质 制作LiveUSB</description>
     </item>
     
   </channel>
