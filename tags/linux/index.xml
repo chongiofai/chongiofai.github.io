@@ -6,7 +6,18 @@
     <description>Recent content in linux on ON THE WAY</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 06 Dec 2020 09:13:12 +0800</lastBuildDate><atom:link href="https://chongiofai.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Jan 2021 17:26:00 +0800</lastBuildDate><atom:link href="https://chongiofai.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tmux Note</title>
+      <link>https://chongiofai.github.io/note/tmux/</link>
+      <pubDate>Thu, 28 Jan 2021 17:26:00 +0800</pubDate>
+      
+      <guid>https://chongiofai.github.io/note/tmux/</guid>
+      <description>Insert Lead paragraph here.
+Tmux笔记 配置文件  我的Tmux配置
+ 操作  Default Commands  1attach-session (attach) [-dErx] [-c working-directory] [-t target-session] 2bind-key (bind) [-nr] [-T key-table] [-N note] key command [arguments] 3break-pane (breakp) [-dP] [-F format] [-n window-name] [-s src-pane] [-t dst-window] 4capture-pane (capturep) [-aCeJNpPq] [-b buffer-name] [-E end-line] [-S start-line] [-t target-pane] 5choose-buffer [-NrZ] [-F format] [-f filter] [-O sort-order] [-t target-pane] [template] 6choose-client [-NrZ] [-F format] [-f filter] [-O sort-order] [-t target-pane] [template] 7choose-tree [-GNrswZ] [-F format] [-f filter] [-O sort-order] [-t target-pane] [template] 8clear-history (clearhist) [-t target-pane] 9clock-mode [-t target-pane] 10command-prompt [-1kiN] [-I inputs] [-p prompts] [-t target-client] [template] 11confirm-before (confirm) [-p prompt] [-t target-client] command 12copy-mode [-eHMuq] [-t target-pane] 13delete-buffer (deleteb) [-b buffer-name] 14detach-client (detach) [-aP] [-E shell-command] [-s target-session] [-t target-client] 15display-menu (menu) [-c target-client] [-t target-pane] [-T title] [-x position] [-y position] name key command .</description>
+    </item>
+    
     <item>
       <title>Install Gentoo/Archlinux</title>
       <link>https://chongiofai.github.io/note/install-gentoo-and-archlinux/</link>

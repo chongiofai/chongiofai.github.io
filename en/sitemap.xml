@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://chongiofai.github.io/</loc>
-    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-28T17:26:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
@@ -19,7 +19,7 @@
   
   <url>
     <loc>https://chongiofai.github.io/categories/</loc>
-    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-28T17:26:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
@@ -33,22 +33,57 @@
   </url>
   
   <url>
+    <loc>https://chongiofai.github.io/tags/cli/</loc>
+    <lastmod>2021-01-28T17:26:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chongiofai.github.io/tags/linux/</loc>
+    <lastmod>2021-01-28T17:26:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chongiofai.github.io/categories/note/</loc>
+    <lastmod>2021-01-28T17:26:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chongiofai.github.io/note/</loc>
+    <lastmod>2021-01-28T17:26:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chongiofai.github.io/tags/</loc>
+    <lastmod>2021-01-28T17:26:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://chongiofai.github.io/cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://chongiofai.github.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://chongiofai.github.io/tags/tmux/</loc>
+    <lastmod>2021-01-28T17:26:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chongiofai.github.io/note/tmux/</loc>
+    <lastmod>2021-01-28T17:26:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://chongiofai.github.io/tags/disk/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://chongiofai.github.io/tags/hardware/</loc>
-    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://chongiofai.github.io/categories/note/</loc>
-    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://chongiofai.github.io/note/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -60,21 +95,6 @@
   <url>
     <loc>https://chongiofai.github.io/note/partition-disk/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://chongiofai.github.io/tags/</loc>
-    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://chongiofai.github.io/cn/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://chongiofai.github.io/tags/"
-                />
   </url>
   
   <url>
@@ -149,11 +169,6 @@
   
   <url>
     <loc>https://chongiofai.github.io/tags/kali/</loc>
-    <lastmod>2020-12-06T09:13:12+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://chongiofai.github.io/tags/linux/</loc>
     <lastmod>2020-12-06T09:13:12+08:00</lastmod>
   </url>
   
